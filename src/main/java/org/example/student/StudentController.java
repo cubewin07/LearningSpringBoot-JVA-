@@ -1,6 +1,8 @@
 package org.example.student;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
@@ -18,6 +20,12 @@ public class StudentController {
     @PostMapping()
     public Student addStudent(@RequestBody Student student) {
         return StudentRepository.save(student);
+    }
+
+    @GetMapping("/{id}") // Final URL = /student/1
+    public Student getStudentById(@PathVariable Long id) {
+        return StudentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Student Not Found"));
     }
 
     @GetMapping()
