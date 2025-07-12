@@ -18,9 +18,4 @@ public class LearningJavaApplication {
 
     }
 
-    @GetMapping("/")
-    public List<Student> hello() {
-        return List.of(new Student("John", "Doe", "<EMAIL>", 25));
-    }
-
 }
