@@ -31,7 +31,11 @@ public class StudentController {
     @GetMapping()
     public Object getStudentByFirstName(@RequestParam(required = false) String firstName) {
         if (firstName != null) {
-            return StudentRepository.findByFirstName(firstName);
+            List<Student> StudentListByFirstName = StudentRepository.findByFirstName(firstName);
+            if (StudentListByFirstName.isEmpty()) {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No student found with name " + firstName);
+            }
+            return StudentListByFirstName;
         }
         return StudentRepository.findAll();
     }
