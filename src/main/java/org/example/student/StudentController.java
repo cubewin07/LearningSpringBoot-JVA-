@@ -29,9 +29,10 @@ public class StudentController {
     }
 
     @GetMapping()
-    public Student getStudentByFirstName(@RequestParam String firstName) {
-        return StudentRepository.findByFirstName(firstName);
+    public Object getStudentByFirstName(@RequestParam(required = false) String firstName) {
+        if (firstName != null) {
+            return StudentRepository.findByFirstName(firstName);
+        }
+        return StudentRepository.findAll();
     }
-
-
 }
