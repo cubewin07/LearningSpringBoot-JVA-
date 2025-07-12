@@ -3,6 +3,7 @@ package org.example;
 import jakarta.persistence.*;
 
 @Entity(name = "student")
+@Table(name = "student", uniqueConstraints = @UniqueConstraint(columnNames = "email", name = "email_unique"))
 public class student {
     @Id
 
@@ -18,7 +19,7 @@ public class student {
     @Column(name = "last_name", nullable = false, columnDefinition = "TEXT")
     private String lastName;
 
-    @Column(name = "email", nullable = false, columnDefinition = "TEXT", unique = true)
+    @Column(name = "email", nullable = false, columnDefinition = "TEXT")
     private String email;
 
     @Column(name = "age", nullable = false)
