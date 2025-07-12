@@ -2,9 +2,9 @@ package org.example;
 
 import jakarta.persistence.*;
 
-@Entity(name = "student")
-@Table(name = "student", uniqueConstraints = @UniqueConstraint(columnNames = "email", name = "email_unique"))
-public class student {
+@Entity(name = "Student")
+@Table(name = "Student", uniqueConstraints = @UniqueConstraint(columnNames = "email", name = "email_unique"))
+public class Student {
     @Id
 
     @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
@@ -25,10 +25,10 @@ public class student {
     @Column(name = "age", nullable = false)
     private Integer age;
 
-    public student() {
+    public Student() {
     }
 
-    public student(Long id, String firstName, String lastName, String email, Integer age) {
+    public Student(Long id, String firstName, String lastName, String email, Integer age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
