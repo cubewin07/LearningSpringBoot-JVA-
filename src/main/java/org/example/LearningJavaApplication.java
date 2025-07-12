@@ -19,8 +19,8 @@ public class LearningJavaApplication {
     }
 
     @GetMapping("/")
-    public String hello() {
-        return "Hello world";
+    public List<Student> hello() {
+        return List.of(new Student("John", "Doe", "<EMAIL>", 25));
     }
 
 }
