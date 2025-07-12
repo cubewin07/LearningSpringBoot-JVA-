@@ -25,7 +25,7 @@ public class StudentController {
     @GetMapping("/{id}") // Final URL = /student/1
     public Student getStudentById(@PathVariable Long id) {
         return StudentRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Student Not Found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student Not Found"));
     }
 
     @GetMapping()
