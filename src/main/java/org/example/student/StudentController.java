@@ -16,6 +16,12 @@ public class StudentController {
         this.StudentRepository = StudentRepository;
     }
 
+
+    @PostMapping("/student")
+    public Student addStudent(@RequestBody Student student) {
+        return StudentRepository.save(student);
+    }
+
     @GetMapping("/student")
     public List<Student> getStudent() {
         return StudentRepository.findAll();
