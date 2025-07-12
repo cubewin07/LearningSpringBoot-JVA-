@@ -59,7 +59,7 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
     public void setAge(int age) {
