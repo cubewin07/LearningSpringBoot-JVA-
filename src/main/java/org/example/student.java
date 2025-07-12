@@ -11,7 +11,7 @@ public class student {
     @GeneratedValue(generator = "student_sequence")
 
     @Column(name = "id", updatable = false, nullable = false)
-    private int id;
+    private Long id;
 
     @Column(name = "first_name", nullable = false, columnDefinition = "TEXT")
     private String firstName;
@@ -23,7 +23,7 @@ public class student {
     private String email;
 
     @Column(name = "age", nullable = false)
-    private int age;
+    private Integer age;
 
     public student() {
     }
