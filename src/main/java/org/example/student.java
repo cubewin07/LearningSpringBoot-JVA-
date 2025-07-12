@@ -1,15 +1,27 @@
 package org.example;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity(name = "student")
 public class student {
     @Id
+
+    @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
+    @GeneratedValue(generator = "student_sequence")
+
+    @Column(name = "id", updatable = false, nullable = false)
     private int id;
+
+    @Column(name = "first_name", nullable = false, columnDefinition = "TEXT")
     private String firstName;
+
+    @Column(name = "last_name", nullable = false, columnDefinition = "TEXT")
     private String lastName;
+
+    @Column(name = "email", nullable = false, columnDefinition = "TEXT", unique = true)
     private String email;
+
+    @Column(name = "age", nullable = false)
     private int age;
 
     public student() {
