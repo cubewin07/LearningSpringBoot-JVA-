@@ -29,8 +29,9 @@ public class StudentController {
     }
 
     @GetMapping()
-    public List<Student> getStudent() {
-        return StudentRepository.findAll();
+    public Student getStudentByFirstName(@RequestParam String firstName) {
+        return StudentRepository.findByFirstName(firstName);
     }
+
 
 }
