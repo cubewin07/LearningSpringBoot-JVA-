@@ -1,13 +1,11 @@
 package org.example.student;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/student")
 public class StudentController {
 
     private final StudentRepository StudentRepository;
@@ -17,12 +15,12 @@ public class StudentController {
     }
 
 
-    @PostMapping("/student")
+    @PostMapping()
     public Student addStudent(@RequestBody Student student) {
         return StudentRepository.save(student);
     }
 
-    @GetMapping("/student")
+    @GetMapping()
     public List<Student> getStudent() {
         return StudentRepository.findAll();
     }
