@@ -22,7 +22,7 @@ public class StudentController {
         return StudentRepository.save(student);
     }
 
-    @GetMapping("/{id}") // Final URL = /student/1
+    @GetMapping("/{id}")
     public Student getStudentById(@PathVariable("id") Long id) {
         return StudentRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student Not Found"));
