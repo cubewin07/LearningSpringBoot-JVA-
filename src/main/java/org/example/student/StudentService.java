@@ -15,6 +15,9 @@ public class StudentService {
     }
 
     public Student addStudent(Student student) {
+        if (StudentRepository.findStudentByEmail(student.getEmail()).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Student with email " + student.getEmail() + " already exists");
+        }
         return StudentRepository.save(student);
     }
 
