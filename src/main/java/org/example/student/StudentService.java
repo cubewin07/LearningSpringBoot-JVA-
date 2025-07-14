@@ -1,5 +1,6 @@
 package org.example.student;
 
+import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -39,5 +40,16 @@ public class StudentService {
         }
         StudentRepository.deleteById(id);
     }
+
+    @Transactional
+    public Student updateStudent(Long id, Student student) {
+        Student studentToUpdate = StudentRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student Not Found"));
+        studentToUpdate.setFirstName(student.getFirstName());
+        studentToUpdate.setLastName(student.getLastName());
+        studentToUpdate.setEmail(student.getEmail());
+        studentToUpdate.setAge(student.getAge());
+        return StudentRepository.save(studentToUpdate);
+    }
+
 
 }
