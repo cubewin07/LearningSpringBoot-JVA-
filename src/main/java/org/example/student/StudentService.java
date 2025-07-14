@@ -1,6 +1,10 @@
 package org.example.student;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 
 @Service
 public class StudentService {
@@ -15,10 +19,10 @@ public class StudentService {
     }
 
     public Student getStudentById(Long id) {
-        return StudentRepository.findById(id).orElseThrow();
+        return StudentRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student Not Found"));
     }
 
-    public Object getStudentByFirstName(String firstName) {
+    public List<Student> getStudentByFirstName(String firstName) {
         return StudentRepository.findByFirstName(firstName);
     }
 
