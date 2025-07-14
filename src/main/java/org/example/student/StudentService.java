@@ -48,7 +48,7 @@ public class StudentService {
         studentToUpdate.setLastName(student.getLastName());
         studentToUpdate.setEmail(student.getEmail());
         studentToUpdate.setAge(student.getAge());
-        return StudentRepository.save(studentToUpdate);
+        return studentToUpdate;
     }
 
 
