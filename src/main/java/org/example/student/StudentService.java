@@ -37,8 +37,13 @@ public class StudentService {
         return StudentRepository.findByFirstName(firstName);
     }
 
-    public Iterable<Student> getAllStudents() {
-        return StudentRepository.findAll();
+    public Iterable<StudentDTO> getAllStudents() {
+
+        return
+                StudentRepository.findAll()
+                        .stream()
+                        .map(student -> new StudentDTO(student.getId(), student.getFullName(), student.getEmail(), student.getAge()))
+                        .collect(Collectors.toList());
     }
 
     public void deleteStudentById(Long id) {
