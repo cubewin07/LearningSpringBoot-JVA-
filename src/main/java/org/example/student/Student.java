@@ -1,5 +1,6 @@
 package org.example.student;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity(name = "Student")
@@ -21,6 +22,10 @@ public class Student {
 
     @Column(name = "last_name", nullable = false, columnDefinition = "TEXT")
     private String lastName;
+
+    @Transient
+//    @JsonProperty("full_name")
+    private String fullName;
 
     @Column(name = "email", nullable = false, columnDefinition = "TEXT")
     private String email;
@@ -55,6 +60,9 @@ public class Student {
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
     }
     public String getEmail() {
         return email;
