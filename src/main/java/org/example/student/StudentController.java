@@ -1,5 +1,6 @@
 package org.example.student;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,10 @@ public class StudentController {
 
 
     @PostMapping()
-    public Student addStudent(@RequestBody Student student) {
+    public Student addStudent( @Valid @RequestBody StudentRequest request) {
+
+        Student student = new Student(request.getFirstName(), request.getLastName(), request.getEmail(), request.getAge());
+
         return StudentService.addStudent(student);
     }
 
