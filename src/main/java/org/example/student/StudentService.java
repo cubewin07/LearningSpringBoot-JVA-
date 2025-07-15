@@ -16,7 +16,7 @@ public class StudentService {
 
     public StudentService(StudentRepository StudentRepository, StudentDTOMapper studentDTOMapper) {
         this.StudentRepository = StudentRepository;
-        StudentDTOMapper = studentDTOMapper;
+        this.StudentDTOMapper = studentDTOMapper;
     }
 
     public Student addStudent(Student student) {
