@@ -12,9 +12,11 @@ import java.util.stream.Collectors;
 @Service
 public class StudentService {
     private final StudentRepository StudentRepository;
+    private final StudentDTOMapper StudentDTOMapper;
 
-    public StudentService(StudentRepository StudentRepository) {
+    public StudentService(StudentRepository StudentRepository, StudentDTOMapper studentDTOMapper) {
         this.StudentRepository = StudentRepository;
+        StudentDTOMapper = studentDTOMapper;
     }
 
     public Student addStudent(Student student) {
@@ -42,7 +44,7 @@ public class StudentService {
         return
                 StudentRepository.findAll()
                         .stream()
-                        .map(student -> new StudentDTO(student.getId(), student.getFullName(), student.getEmail(), student.getAge()))
+                        .map(StudentDTOMapper)
                         .collect(Collectors.toList());
     }
 
