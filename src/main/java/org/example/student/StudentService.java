@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class StudentService {
@@ -22,8 +24,13 @@ public class StudentService {
         return StudentRepository.save(student);
     }
 
-    public Student getStudentById(Long id) {
-        return StudentRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student Not Found"));
+    public StudentDTO getStudentById(Long id) {
+        Optional<Student> student = StudentRepository.findById(id);
+        if (student.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Student Not Found");
+        } else {
+            return new StudentDTO(student.get().getId(), student.get().getFullName(), student.get().getEmail(), student.get().getAge());
+        }
     }
 
     public List<Student> getStudentByFirstName(String firstName) {
