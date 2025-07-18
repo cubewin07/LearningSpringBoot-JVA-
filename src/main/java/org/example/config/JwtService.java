@@ -5,6 +5,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
 import java.security.Key;
+import java.util.Date;
 import java.util.function.Function;
 
 public class JwtService {
@@ -15,6 +16,11 @@ public class JwtService {
 
         return extractClaim(token, Claims::getSubject);
     }
+
+    public Date extractExpiration(String token) {
+        return extractClaim(token, Claims::getExpiration);
+    }
+
 
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
