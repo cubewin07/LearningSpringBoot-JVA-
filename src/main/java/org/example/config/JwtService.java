@@ -21,6 +21,10 @@ public class JwtService {
         return extractClaim(token, Claims::getExpiration);
     }
 
+    public boolean isTokenExpired(String token) {
+        return extractExpiration(token).before(new Date());
+    }
+
 
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
