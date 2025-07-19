@@ -1,5 +1,6 @@
 package org.example.config;
 
+import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,8 +21,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtService jwtService;
     private final UserDetailsService userDetailsService;
+    private final Filter JWTAuthenticationFilter;
 
     @Bean
     public SecurityFilterChain jwtAuthenticationFilter(HttpSecurity http) throws Exception {
@@ -29,12 +30,12 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth ->
                         auth
-                                .requestMatchers().permitAll()
+                                .requestMatchers("").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtService, UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(JWTAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
 
