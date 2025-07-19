@@ -1,5 +1,6 @@
 package org.example.authen;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,10 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("api/v1")
+@RequiredArgsConstructor
 public class AuthenController {
+
+    private final AuthenService authenService;
+
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse>  registerUser(@RequestBody RegisterRequest request) {
-        return null;
+        return ResponseEntity.ok(authenService.registerUser(request));
     }
 
     @PostMapping("/authenticate")
