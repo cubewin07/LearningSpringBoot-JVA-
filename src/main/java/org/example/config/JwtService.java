@@ -31,7 +31,7 @@ public class JwtService {
         return extractUsername(token).equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
 
-    public String genertateToken(UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails) {
         return Jwts
                 .builder()
                 .setClaims(new HashMap<>())
