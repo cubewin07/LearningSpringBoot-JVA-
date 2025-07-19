@@ -1,6 +1,7 @@
 package org.example.user;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,6 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 @Data
+@Builder
 @RequiredArgsConstructor
 public class User implements UserDetails {
 
