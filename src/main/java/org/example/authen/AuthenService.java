@@ -1,6 +1,7 @@
 package org.example.authen;
 
 import lombok.RequiredArgsConstructor;
+import org.example.Exception.UsernameNotFound;
 import org.example.config.JwtService;
 import org.example.user.Role;
 import org.example.user.User;
@@ -42,7 +43,7 @@ public class AuthenService {
                 )
         );
         var user = userRepository.findByEmail(request.email())
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+                .orElseThrow(() -> new UsernameNotFound("User not found"));
         String jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
