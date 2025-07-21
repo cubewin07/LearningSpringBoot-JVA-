@@ -1,6 +1,7 @@
 package org.example.Exception;
 
 
+import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,4 +19,15 @@ public class GlobalExeptionHanlder {
         );
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(ExpiredJwtException.class)
+    public ResponseEntity<ErrorRes> handleExpiredJwtException(ExpiredJwtException ex) {
+        ErrorRes error = new ErrorRes(
+                HttpStatus.UNAUTHORIZED.value(),
+                ex.getMessage(),
+                System.currentTimeMillis()
+        );
+        return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
+    }
 }
+
