@@ -34,6 +34,16 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         final String username;
 
         if(authenHeader == null || !authenHeader.startsWith("Bearer ")) {
+            System.out.println("Request path: " + request.getServletPath());
+            System.out.println("Authorization header: " + authenHeader);
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        String path = request.getServletPath();
+        if (path.equals("/api/v1/authenticate") || path.equals("/api/v1/register")) {
+            System.out.println("Request path: " + request.getServletPath());
+            System.out.println("Authorization header: " + authenHeader);
             filterChain.doFilter(request, response);
             return;
         }
