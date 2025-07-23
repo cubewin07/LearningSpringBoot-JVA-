@@ -2,6 +2,7 @@ package org.example.Exception;
 
 
 import io.jsonwebtoken.ExpiredJwtException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -29,5 +30,17 @@ public class GlobalExeptionHanlder {
         );
         return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
     }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ErrorRes> handleResembleDataException(DataIntegrityViolationException ex){
+        ErrorRes error = new ErrorRes(
+                HttpStatus.CONFLICT.value(),
+                ex.getMessage(),
+                System.currentTimeMillis()
+        );
+
+        return new ResponseEntity<>(error, HttpStatus.CONFLICT);
+    }
+
 }
 
