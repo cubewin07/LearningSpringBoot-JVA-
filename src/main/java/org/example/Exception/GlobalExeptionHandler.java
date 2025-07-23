@@ -2,14 +2,13 @@ package org.example.Exception;
 
 
 import io.jsonwebtoken.ExpiredJwtException;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class GlobalExeptionHanlder {
+public class GlobalExeptionHandler {
 
     @ExceptionHandler(UsernameNotFound.class)
     public ResponseEntity<ErrorRes> handleUsernameNotFound(UsernameNotFound ex) {
