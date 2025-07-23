@@ -31,8 +31,8 @@ public class GlobalExeptionHanlder {
         return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
     }
 
-    @ExceptionHandler(DataIntegrityViolationException.class)
-    public ResponseEntity<ErrorRes> handleResembleDataException(DataIntegrityViolationException ex){
+    @ExceptionHandler(ResembleEmailFound.class)
+    public ResponseEntity<ErrorRes> handleResembleDataException(ResembleEmailFound ex){
         ErrorRes error = new ErrorRes(
                 HttpStatus.CONFLICT.value(),
                 ex.getMessage(),
