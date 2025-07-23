@@ -25,7 +25,7 @@ public class AuthenController {
         return ResponseEntity.ok(authenService.authenticateUser(request));
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public ResponseEntity<List<UserDetails>> getAllUser() {
         return ResponseEntity.ok(authenService.getAllUser());
     }
