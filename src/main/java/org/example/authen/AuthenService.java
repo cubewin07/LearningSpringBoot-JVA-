@@ -1,6 +1,7 @@
 package org.example.authen;
 
 import lombok.RequiredArgsConstructor;
+import org.example.Exception.ResembleEmailFound;
 import org.example.Exception.UsernameNotFound;
 import org.example.config.JwtService;
 import org.example.user.Role;
@@ -21,6 +22,9 @@ public class AuthenService {
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse registerUser(RegisterRequest request) {
+        if(userRepository.existsByEmail(request.email())) {
+            throw new ResembleEmailFound("Email is already taken");
+        }
         var user = User.builder()
                 .name(request.name())
                 .email(request.email())
