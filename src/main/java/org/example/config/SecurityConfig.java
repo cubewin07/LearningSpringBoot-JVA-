@@ -2,6 +2,7 @@ package org.example.config;
 
 import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
+import org.example.user.Role;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -33,6 +34,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth ->
                         auth
                                 .requestMatchers("/api/v1/authenticate", "/api/v1/register").permitAll()
+                                .requestMatchers("/api/v1/users").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
