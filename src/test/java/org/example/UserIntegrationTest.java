@@ -12,6 +12,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -40,7 +42,7 @@ public class UserIntegrationTest {
                     "password": "12334",
                     "email": "thang071208@gmail.com"
                 }""";
-        var res = mockMvc.perform(post("/api/v1/register")
+        MvcResult res = mockMvc.perform(post("/api/v1/register")
                 .contentType("application/json")
                 .content(requestBody)
         )
