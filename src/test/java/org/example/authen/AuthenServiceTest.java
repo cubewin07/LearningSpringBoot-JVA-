@@ -34,14 +34,13 @@ public class AuthenServiceTest {
 
         var user = User.builder().name(request.name()).email(request.email()).password(request.password()).role(Role.USER).build();
 
-        Mockito.when(jwtService.generateToken(user)).thenReturn("mock-token")
+        Mockito.when(jwtService.generateToken(user)).thenReturn("mock-token");
 
-        String token = authenService.registerUser(request);
+        String token = authenService.registerUser(request).getToken();
 
 
 
         assertNotNull(token);
         assertEquals("mock-token", token);
-        assertTrue(token.length() > 0 || token.startsWith("Bearer "));
     }
 }
