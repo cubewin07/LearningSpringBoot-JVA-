@@ -28,11 +28,12 @@ public class UserIntegrationTest {
 
     @Test
     public void registerUserTesting() throws Exception {
-        String requestBody = "{\n" +
-                "    \"name\": \"Thang\",\n" +
-                "    \"password\": \"12334\",\n" +
-                "    \"email\": \"thang@gmail.com\"\n" +
-                "}";
+        String requestBody = """
+                {
+                    "name": "Thang",
+                    "password": "12334",
+                    "email": "thang@gmail.com"
+                }""";
         mockMvc.perform(post("/api/v1/register")
                 .contentType("application/json")
                 .content(requestBody)
