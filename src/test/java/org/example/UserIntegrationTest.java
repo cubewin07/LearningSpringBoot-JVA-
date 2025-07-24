@@ -38,13 +38,17 @@ public class UserIntegrationTest {
                 {
                     "name": "Thang",
                     "password": "12334",
-                    "email": "thang0712@gmail.com"
+                    "email": "thang071208@gmail.com"
                 }""";
-        mockMvc.perform(post("/api/v1/register")
+        var res = mockMvc.perform(post("/api/v1/register")
                 .contentType("application/json")
-                .content(requestBody))
+                .content(requestBody)
+        )
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.token").exists());
+                .andExpect(jsonPath("$.token").exists())
+                .andReturn();
 
+        String token = res.getResponse().getContentAsString();
+        System.out.println(token);
     }
 }
