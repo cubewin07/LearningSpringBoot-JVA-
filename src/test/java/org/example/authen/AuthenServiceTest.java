@@ -37,16 +37,20 @@ public class AuthenServiceTest {
     public void testRegisterUserReturnsToken() {
 
         RegisterRequest request = new RegisterRequest("test", "12344", "<EMAIL>");
-        Mockito.when(userRepository.findByEmail("<EMAIL>")).thenReturn(Optional.empty());
+
+        Mockito.when(userRepository.existsByEmail("<EMAIL>")).thenReturn(false);
+        Mockito.when(passwordEncoder.encode("12344")).thenReturn("12344");
+        Mockito.when(jwtService.generateToken(Mockito.any(User.class))).thenReturn("mocked-token");
 
         var user = User.builder().name(request.name()).email(request.email()).password(request.password()).role(Role.USER).build();
 
 
+
         String token = authenService.registerUser(request).getToken();
 
+        System.out.println(token);
 
+        assertEquals("mocked-token", token);
 
-        assertNotNull(token);
-        assertTrue(!token.isEmpty() || token.startsWith("Bearer "));
     }
 }
