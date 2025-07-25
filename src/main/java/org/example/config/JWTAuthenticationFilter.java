@@ -44,7 +44,8 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
         if(authenHeader == null || !authenHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);
-            log.info("[Response] {} {} -> Status: {} ({} ms)", path, method, response.getStatus() ,timestamp);
+            log.info("[Response] method={} path={} status={} duration={}ms",
+                    method, path, response.getStatus(), timestamp);
             return;
         }
 
@@ -61,8 +62,9 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
                 log.warn("Invalid JWT token for user: {}", username);
             }
         }
-        filterChain.doFilter(request, response);
         Long duration = System.currentTimeMillis() - timestamp;
-        log.info("[Response] {} {} -> Status: {} ({} ms)", path, method, response.getStatus() ,duration);
+        filterChain.doFilter(request, response);
+        log.info("[Response] method={} path={} status={} duration={}ms",
+                method, path, response.getStatus(), response);
     }
 }

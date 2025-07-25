@@ -9,3 +9,122 @@
 2025-07-25 09:58:04 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
 2025-07-25 09:58:05 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
 2025-07-25 09:58:05 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response]  POST -> Status: 200 (1753412284889 ms)
+2025-07-25 10:08:12 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:08:12 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:08:13 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e161cea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@673e1cf2, org.springframework.security.web.context.SecurityContextHolderFilter@88fc9cb, org.springframework.security.web.header.HeaderWriterFilter@2f70d78c, org.springframework.web.filter.CorsFilter@27a23d87, org.springframework.security.web.authentication.logout.LogoutFilter@fe337, org.example.config.JWTAuthenticationFilter@68722de3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39a1c200, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603a34e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72155315, org.springframework.security.web.session.SessionManagementFilter@202ba60a, org.springframework.security.web.access.ExceptionTranslationFilter@34893693, org.springframework.security.web.access.intercept.AuthorizationFilter@1dc28c66]
+2025-07-25 10:08:13 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:08:13 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-25 10:08:13 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753412893466 ms)
+2025-07-25 10:08:13 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:08:13 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:08:13 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-25 10:08:13 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-25 10:08:13 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] POST  -> Status: 200 (1753412893466 ms)
+2025-07-25 10:09:11 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:09:12 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:09:12 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d8cece4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55d98bbb, org.springframework.security.web.context.SecurityContextHolderFilter@1d77d9c6, org.springframework.security.web.header.HeaderWriterFilter@8bb5c2a, org.springframework.web.filter.CorsFilter@2e9f5499, org.springframework.security.web.authentication.logout.LogoutFilter@5d3d5242, org.example.config.JWTAuthenticationFilter@77aeba9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51eeae0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76c2d002, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30f54522, org.springframework.security.web.session.SessionManagementFilter@603a34e5, org.springframework.security.web.access.ExceptionTranslationFilter@711fbcef, org.springframework.security.web.access.intercept.AuthorizationFilter@72155315]
+2025-07-25 10:09:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:09:12 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-25 10:09:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753412952550 ms)
+2025-07-25 10:09:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:09:12 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:09:12 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-25 10:09:12 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-25 10:09:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753412952550ms
+2025-07-25 10:10:02 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:10:03 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:10:03 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e161cea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@673e1cf2, org.springframework.security.web.context.SecurityContextHolderFilter@88fc9cb, org.springframework.security.web.header.HeaderWriterFilter@2f70d78c, org.springframework.web.filter.CorsFilter@27a23d87, org.springframework.security.web.authentication.logout.LogoutFilter@fe337, org.example.config.JWTAuthenticationFilter@68722de3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39a1c200, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603a34e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72155315, org.springframework.security.web.session.SessionManagementFilter@202ba60a, org.springframework.security.web.access.ExceptionTranslationFilter@34893693, org.springframework.security.web.access.intercept.AuthorizationFilter@1dc28c66]
+2025-07-25 10:10:03 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:10:03 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-25 10:10:03 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753413003615 ms)
+2025-07-25 10:10:03 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:10:03 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:10:03 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-25 10:10:03 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-25 10:10:03 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753413003615ms
+2025-07-25 10:12:42 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:12:42 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:12:42 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d8cece4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55d98bbb, org.springframework.security.web.context.SecurityContextHolderFilter@1d77d9c6, org.springframework.security.web.header.HeaderWriterFilter@8bb5c2a, org.springframework.web.filter.CorsFilter@2e9f5499, org.springframework.security.web.authentication.logout.LogoutFilter@5d3d5242, org.example.config.JWTAuthenticationFilter@77aeba9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51eeae0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76c2d002, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30f54522, org.springframework.security.web.session.SessionManagementFilter@603a34e5, org.springframework.security.web.access.ExceptionTranslationFilter@711fbcef, org.springframework.security.web.access.intercept.AuthorizationFilter@72155315]
+2025-07-25 10:12:43 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:12:43 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-25 10:12:43 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753413163329 ms)
+2025-07-25 10:12:43 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:12:43 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:12:43 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-25 10:12:43 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-25 10:12:43 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753413163329ms
+2025-07-25 10:12:57 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:12:57 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:12:57 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e161cea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@673e1cf2, org.springframework.security.web.context.SecurityContextHolderFilter@88fc9cb, org.springframework.security.web.header.HeaderWriterFilter@2f70d78c, org.springframework.web.filter.CorsFilter@27a23d87, org.springframework.security.web.authentication.logout.LogoutFilter@fe337, org.example.config.JWTAuthenticationFilter@68722de3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39a1c200, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603a34e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72155315, org.springframework.security.web.session.SessionManagementFilter@202ba60a, org.springframework.security.web.access.ExceptionTranslationFilter@34893693, org.springframework.security.web.access.intercept.AuthorizationFilter@1dc28c66]
+2025-07-25 10:12:57 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:12:58 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-25 10:12:58 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753413178268 ms)
+2025-07-25 10:12:58 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:12:58 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:12:58 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-25 10:12:58 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-25 10:12:58 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753413178268ms
+2025-07-25 10:13:14 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:13:15 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:13:15 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:13:15 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63d14dbf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67521a79, org.springframework.security.web.context.SecurityContextHolderFilter@3b8a063d, org.springframework.security.web.header.HeaderWriterFilter@3eb8057c, org.springframework.web.filter.CorsFilter@73839f22, org.springframework.security.web.authentication.logout.LogoutFilter@58b30e3e, org.example.config.JWTAuthenticationFilter@28d7bd6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b1f36e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52afcdd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1512efe9, org.springframework.security.web.session.SessionManagementFilter@530a46f4, org.springframework.security.web.access.ExceptionTranslationFilter@136690b1, org.springframework.security.web.access.intercept.AuthorizationFilter@260ccf0]
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing POST /authenticate
+2025-07-25 10:14:44 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /authenticate POST (1753413284019 ms)
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:14:44 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/authenticate status=403 duration=1753413284019ms
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing POST /error
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:14:44 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing POST /authenticate
+2025-07-25 10:15:31 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /authenticate POST (1753413331690 ms)
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:15:31 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/authenticate status=403 duration=1753413331690ms
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing POST /error
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:15:31 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing POST /authenticate
+2025-07-25 10:15:33 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Request] /authenticate POST (1753413333506 ms)
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:15:33 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/authenticate status=403 duration=1753413333506ms
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing POST /error
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:15:33 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:16:01 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 10:16:02 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 10:16:02 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 10:16:02 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64836643, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@981d9d2, org.springframework.security.web.context.SecurityContextHolderFilter@610d0067, org.springframework.security.web.header.HeaderWriterFilter@8cce9ad, org.springframework.web.filter.CorsFilter@ad6448e, org.springframework.security.web.authentication.logout.LogoutFilter@659e003e, org.example.config.JWTAuthenticationFilter@76cbee13, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a1878d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b625e82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3da6950f, org.springframework.security.web.session.SessionManagementFilter@6a8ab98f, org.springframework.security.web.access.ExceptionTranslationFilter@9771c71, org.springframework.security.web.access.intercept.AuthorizationFilter@4db45d]
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing POST /swagger-ui.html
+2025-07-25 10:16:17 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /swagger-ui.html POST (1753413377661 ms)
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured POST /swagger-ui.html
+2025-07-25 10:16:17 WARN  [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-07-25 10:16:17 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/swagger-ui.html status=405 duration=1753413377661ms
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing POST /error
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:16:17 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-07-25 10:16:21 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /swagger-ui.html GET (1753413381423 ms)
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui.html
+2025-07-25 10:16:21 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/swagger-ui.html status=302 duration=1753413381423ms
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2025-07-25 10:16:21 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Request] /swagger-ui/index.html GET (1753413381470 ms)
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:16:21 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2025-07-25 10:16:21 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/swagger-ui/index.html status=200 duration=1753413381470ms
+2025-07-25 10:16:44 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-25 10:16:44 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753413404926 ms)
+2025-07-25 10:16:44 DEBUG [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 10:16:44 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 10:16:44 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-25 10:16:45 DEBUG [http-nio-8080-exec-5] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-25 10:16:45 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753413404926ms
