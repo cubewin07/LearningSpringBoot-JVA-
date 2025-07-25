@@ -136,3 +136,180 @@
 2025-07-25 14:55:30 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m20s606ms).
 2025-07-25 15:01:22 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m52s783ms).
 2025-07-25 15:17:33 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m40s448ms).
+2025-07-25 15:30:20 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:30:20 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 15:30:20 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:30:20 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30b5f974, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37227aa7, org.springframework.security.web.context.SecurityContextHolderFilter@7d1b96b9, org.springframework.security.web.header.HeaderWriterFilter@6527aa0, org.springframework.web.filter.CorsFilter@57e2d15c, org.springframework.security.web.authentication.logout.LogoutFilter@205d6f84, org.example.config.JWTAuthenticationFilter@1454339d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a93f51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@738955e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6810465, org.springframework.security.web.session.SessionManagementFilter@79a12552, org.springframework.security.web.access.ExceptionTranslationFilter@7be9582e, org.springframework.security.web.access.intercept.AuthorizationFilter@70ed03e4]
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-07-25 15:30:45 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /swagger-ui.html GET (1753432245667 ms)
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui.html
+2025-07-25 15:30:45 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/swagger-ui.html status=302 duration=1753432245667ms
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2025-07-25 15:30:45 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /swagger-ui/index.html GET (1753432245693 ms)
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:30:45 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2025-07-25 15:30:45 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/swagger-ui/index.html status=200 duration=1753432245693ms
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /manage/health
+2025-07-25 15:31:25 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Request] /manage/health GET (1753432285279 ms)
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:31:25 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/manage/health status=403 duration=1753432285279ms
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:31:25 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing GET /manage/health
+2025-07-25 15:31:39 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Request] /manage/health GET (1753432299876 ms)
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:31:39 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/manage/health status=403 duration=1753432299876ms
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:31:39 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:32:08 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:32:09 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 15:32:09 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:32:09 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30b5f974, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37227aa7, org.springframework.security.web.context.SecurityContextHolderFilter@7d1b96b9, org.springframework.security.web.header.HeaderWriterFilter@6527aa0, org.springframework.web.filter.CorsFilter@57e2d15c, org.springframework.security.web.authentication.logout.LogoutFilter@205d6f84, org.example.config.JWTAuthenticationFilter@1454339d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a93f51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@738955e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6810465, org.springframework.security.web.session.SessionManagementFilter@79a12552, org.springframework.security.web.access.ExceptionTranslationFilter@7be9582e, org.springframework.security.web.access.intercept.AuthorizationFilter@70ed03e4]
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:35:27 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432527279 ms)
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:27 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432527279ms
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:27 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:35:28 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432528616 ms)
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:28 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432528616ms
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:28 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:35:48 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432548114 ms)
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:48 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432548114ms
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:48 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:35:54 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432554491 ms)
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:35:54 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432554491ms
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:35:54 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing GET /manage/health
+2025-07-25 15:36:02 INFO  [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - [Request] /manage/health GET (1753432562953 ms)
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:36:02 INFO  [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/manage/health status=403 duration=1753432562953ms
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:36:02 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Securing GET /manage/health
+2025-07-25 15:36:47 INFO  [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - [Request] /manage/health GET (1753432607101 ms)
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:36:47 INFO  [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/manage/health status=403 duration=1753432607101ms
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:36:47 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:37:03 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432623881 ms)
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:37:03 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432623881ms
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:37:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:39:53 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:39:54 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 15:39:54 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:39:54 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30b5f974, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37227aa7, org.springframework.security.web.context.SecurityContextHolderFilter@7d1b96b9, org.springframework.security.web.header.HeaderWriterFilter@6527aa0, org.springframework.web.filter.CorsFilter@57e2d15c, org.springframework.security.web.authentication.logout.LogoutFilter@205d6f84, org.example.config.JWTAuthenticationFilter@1454339d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a93f51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@738955e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6810465, org.springframework.security.web.session.SessionManagementFilter@79a12552, org.springframework.security.web.access.ExceptionTranslationFilter@7be9582e, org.springframework.security.web.access.intercept.AuthorizationFilter@70ed03e4]
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:39:58 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432798122 ms)
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:39:58 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432798122ms
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:39:58 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:40:16 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /manage/health
+2025-07-25 15:40:16 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:40:16 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:40:16 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:40:16 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:40:16 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:40:18 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /manage/health
+2025-07-25 15:40:18 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:40:18 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:40:18 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:40:18 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:40:18 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:40:38 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:40:38 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 15:40:38 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:40:38 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30b5f974, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37227aa7, org.springframework.security.web.context.SecurityContextHolderFilter@7d1b96b9, org.springframework.security.web.header.HeaderWriterFilter@6527aa0, org.springframework.web.filter.CorsFilter@57e2d15c, org.springframework.security.web.authentication.logout.LogoutFilter@205d6f84, org.example.config.JWTAuthenticationFilter@1454339d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a93f51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@738955e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6810465, org.springframework.security.web.session.SessionManagementFilter@79a12552, org.springframework.security.web.access.ExceptionTranslationFilter@7be9582e, org.springframework.security.web.access.intercept.AuthorizationFilter@70ed03e4]
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:41:03 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /actuator/health GET (1753432863762 ms)
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: Basic YWRtaW46c2VjcmV0
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:41:03 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=GET path=/actuator/health status=403 duration=1753432863762ms
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:41:03 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:41:55 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:41:56 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 15:41:56 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:41:56 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6df605f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68cc6fa4, org.springframework.security.web.context.SecurityContextHolderFilter@6ed87b1c, org.springframework.security.web.header.HeaderWriterFilter@6030eff1, org.springframework.web.filter.CorsFilter@484dde7d, org.springframework.security.web.authentication.logout.LogoutFilter@64404db6, org.example.config.JWTAuthenticationFilter@4def900a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29ceefb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12dd3501, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d729af6, org.springframework.security.web.session.SessionManagementFilter@6b6d8671, org.springframework.security.web.access.ExceptionTranslationFilter@1046aaa4, org.springframework.security.web.access.intercept.AuthorizationFilter@768967cf]
+2025-07-25 15:42:00 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:42:00 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:42:00 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:42:00 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:42:00 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:42:00 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:42:01 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:42:01 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:42:01 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:42:01 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:42:01 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:42:01 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:43:44 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:43:44 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:43:44 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:43:44 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:43:44 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:43:44 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:45:04 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:45:04 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:45:04 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:45:04 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:45:04 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:45:04 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:45:39 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:45:39 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-25 15:45:39 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:45:39 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c914364, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25c756f0, org.springframework.security.web.context.SecurityContextHolderFilter@3619bc9e, org.springframework.security.web.header.HeaderWriterFilter@79194b1c, org.springframework.web.filter.CorsFilter@66c9aca2, org.springframework.security.web.authentication.logout.LogoutFilter@3a8cc099, org.example.config.JWTAuthenticationFilter@53945f9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24673720, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23973547, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18206382, org.springframework.security.web.session.SessionManagementFilter@2125086c, org.springframework.security.web.access.ExceptionTranslationFilter@7c9015c6, org.springframework.security.web.access.intercept.AuthorizationFilter@74727e41]
+2025-07-25 15:45:45 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-07-25 15:45:45 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:45:45 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-07-25 15:45:45 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /error
+2025-07-25 15:45:45 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-25 15:45:45 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access

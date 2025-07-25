@@ -67,4 +67,9 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         log.info("[Response] method={} path={} status={} duration={}ms",
                 method, path, response.getStatus(), response);
     }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        return request.getServletPath().startsWith("/actuator");
+    }
 }
