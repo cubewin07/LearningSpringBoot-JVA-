@@ -40,14 +40,6 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
             return;
         }
 
-        String path = request.getServletPath();
-        if (path.equals("/api/v1/authenticate") || path.equals("/api/v1/register")) {
-            System.out.println("Request path: " + request.getServletPath());
-            System.out.println("Authorization header: " + authenHeader);
-            filterChain.doFilter(request, response);
-            return;
-        }
-
         jwt = authenHeader.substring(7);
         username = jwtService.extractUsername(jwt);
 
