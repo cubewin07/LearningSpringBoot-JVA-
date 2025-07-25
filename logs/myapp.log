@@ -128,3 +128,11 @@
 2025-07-25 10:16:44 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
 2025-07-25 10:16:45 DEBUG [http-nio-8080-exec-5] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
 2025-07-25 10:16:45 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753413404926ms
+2025-07-25 11:24:17 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s202ms).
+2025-07-25 11:26:11 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s182ms).
+2025-07-25 11:44:06 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m24s781ms).
+2025-07-25 12:04:09 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m32s945ms).
+2025-07-25 12:23:02 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m23s407ms).
+2025-07-25 14:55:30 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m20s606ms).
+2025-07-25 15:01:22 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m52s783ms).
+2025-07-25 15:17:33 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m40s448ms).

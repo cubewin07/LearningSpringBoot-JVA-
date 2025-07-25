@@ -8,6 +8,7 @@
           <option value="untitled" />
           <option value="untitled" />
           <option value="untitled" />
+          <option value="untitled" />
         </list>
       </option>
       <option name="ignoredPackages">
@@ -15,10 +16,12 @@
           <option value="org.apache.commons:commons-lang3:3.13.0" />
           <option value="net.minidev:json-smart:2.5.0" />
           <option value="org.xmlunit:xmlunit-core:2.9.1" />
+          <option value="org.springframework.security:spring-security-crypto:6.2.2" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
