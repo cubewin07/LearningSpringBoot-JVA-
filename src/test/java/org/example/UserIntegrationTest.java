@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.junit.jupiter.api.*;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -21,6 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(properties = "spring.profiles.active=test")
 @AutoConfigureMockMvc
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserIntegrationTest {
 
     @Autowired
@@ -34,27 +36,29 @@ public class UserIntegrationTest {
     private MockMvc mockMvc;
 
 
-//    @Test
-//    public void registerUserTesting() throws Exception {
-//        String requestBody = """
-//                {
-//                    "name": "Thang",
-//                    "password": "12334",
-//                    "email": "thang071208@gmail.com"
-//                }""";
-//        MvcResult res = mockMvc.perform(post("/api/v1/register")
-//                .contentType("application/json")
-//                .content(requestBody)
-//        )
-//                .andExpect(status().isOk())
-//                .andExpect(jsonPath("$.token").exists())
-//                .andReturn();
-//
-//        String token = res.getResponse().getContentAsString();
-//        System.out.println(token);
-//    }
+    @Test
+    @Order(1)
+    public void registerUserTesting() throws Exception {
+        String requestBody = """
+                {
+                    "name": "Thang",
+                    "password": "12334",
+                    "email": "thang071208@gmail.com"
+                }""";
+        MvcResult res = mockMvc.perform(post("/api/v1/register")
+                .contentType("application/json")
+                .content(requestBody)
+        )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.token").exists())
+                .andReturn();
+
+        String token = res.getResponse().getContentAsString();
+        System.out.println(token);
+    }
 
     @Test
+    @Order(2)
     public void authenticateUser() throws Exception{
         String request = """
                     {
