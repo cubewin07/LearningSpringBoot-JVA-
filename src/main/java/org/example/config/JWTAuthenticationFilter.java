@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +17,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
@@ -32,6 +34,13 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         final String authenHeader = request.getHeader("Authorization");
         final String jwt;
         final String username;
+        long timestamp = System.currentTimeMillis();
+
+        String path = request.getServletPath();
+        String method = request.getMethod();
+
+        log.info("[Request] {} {} ({} ms)", path, method, timestamp);
+        log.debug("Authorization header: {}", authenHeader);
 
         if(authenHeader == null || !authenHeader.startsWith("Bearer ")) {
             System.out.println("Request path: " + request.getServletPath());
