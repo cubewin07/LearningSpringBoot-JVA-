@@ -46,6 +46,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
             System.out.println("Request path: " + request.getServletPath());
             System.out.println("Authorization header: " + authenHeader);
             filterChain.doFilter(request, response);
+            log.info("[Response] {} {} -> Status: {} ({} ms)", path, method, response.getStatus() ,timestamp);
             return;
         }
 
@@ -57,9 +58,13 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
             if(jwtService.isValidToken(jwt, userDetails)) {
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                log.info("Authenticated user: {}", username);
+            } else {
+                log.warn("Invalid JWT token for user: {}", username);
             }
         }
         filterChain.doFilter(request, response);
-
+        Long duration = System.currentTimeMillis() - timestamp;
+        log.info("[Response] {} {} -> Status: {} ({} ms)", path, method, response.getStatus() ,duration);
     }
 }
