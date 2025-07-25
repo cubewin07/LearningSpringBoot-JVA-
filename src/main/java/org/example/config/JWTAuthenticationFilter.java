@@ -43,8 +43,6 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         log.debug("Authorization header: {}", authenHeader);
 
         if(authenHeader == null || !authenHeader.startsWith("Bearer ")) {
-            System.out.println("Request path: " + request.getServletPath());
-            System.out.println("Authorization header: " + authenHeader);
             filterChain.doFilter(request, response);
             log.info("[Response] {} {} -> Status: {} ({} ms)", path, method, response.getStatus() ,timestamp);
             return;
