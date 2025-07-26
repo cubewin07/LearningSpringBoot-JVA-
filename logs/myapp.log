@@ -18,3 +18,193 @@
 2025-07-26 07:36:07 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m3s865ms).
 2025-07-26 08:14:33 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m55s414ms).
 2025-07-26 08:59:52 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m19s411ms).
+2025-07-26 10:35:48 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-26 10:35:49 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-26 10:35:49 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2025-07-26 10:35:49 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-26 10:35:49 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-26 10:35:49 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2dacad1d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15a87fbb, org.springframework.security.web.context.SecurityContextHolderFilter@6cb2d5ea, org.springframework.security.web.header.HeaderWriterFilter@4e6c703a, org.springframework.web.filter.CorsFilter@6d92bfaf, org.springframework.security.web.authentication.logout.LogoutFilter@157e0f6b, org.example.config.JWTAuthenticationFilter@6fc03cf6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e729fea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17a756db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a23b96b, org.springframework.security.web.session.SessionManagementFilter@533165e7, org.springframework.security.web.access.ExceptionTranslationFilter@5dc90de7, org.springframework.security.web.access.intercept.AuthorizationFilter@15d0f2a3]
+2025-07-26 10:36:34 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-26 10:36:34 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-26 10:36:34 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-26 10:36:34 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cbb79c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bc46dde, org.springframework.security.web.context.SecurityContextHolderFilter@6b26839d, org.springframework.security.web.header.HeaderWriterFilter@7926d092, org.springframework.web.filter.CorsFilter@409b1740, org.springframework.security.web.authentication.logout.LogoutFilter@173c0722, org.example.config.JWTAuthenticationFilter@2bf2523f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a1abba1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20f94e9a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32dc895e, org.springframework.security.web.session.SessionManagementFilter@3ed1446c, org.springframework.security.web.access.ExceptionTranslationFilter@5120886f, org.springframework.security.web.access.intercept.AuthorizationFilter@6d92bfaf]
+2025-07-26 10:37:23 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing POST /api/v1/register
+2025-07-26 10:37:23 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/register POST (1753501043339 ms)
+2025-07-26 10:37:23 DEBUG [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:23 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:23 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:23 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured POST /api/v1/register
+2025-07-26 10:37:23 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/register status=200 duration=1753501043339ms
+2025-07-26 10:37:37 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:37 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501057877 ms)
+2025-07-26 10:37:37 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:37 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:37 DEBUG [http-nio-8080-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:37 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-3] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:38 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501057877ms
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:38 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501058580 ms)
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:38 DEBUG [http-nio-8080-exec-4] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:38 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501058580ms
+2025-07-26 10:37:39 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:39 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501059677 ms)
+2025-07-26 10:37:39 DEBUG [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:39 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:39 DEBUG [http-nio-8080-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:39 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:39 DEBUG [http-nio-8080-exec-5] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:39 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501059677ms
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:40 INFO  [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501060283 ms)
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-6] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:40 INFO  [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501060283ms
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:40 INFO  [http-nio-8080-exec-7] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501060846 ms)
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-7] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-7] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:40 DEBUG [http-nio-8080-exec-7] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:40 INFO  [http-nio-8080-exec-7] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501060846ms
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:41 INFO  [http-nio-8080-exec-8] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501061387 ms)
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-8] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-8] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-8] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:41 INFO  [http-nio-8080-exec-8] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501061387ms
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:41 INFO  [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501061981 ms)
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-9] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:41 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-9] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:42 INFO  [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501061981ms
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:42 INFO  [http-nio-8080-exec-10] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501062570 ms)
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-10] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-10] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:42 DEBUG [http-nio-8080-exec-10] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:42 INFO  [http-nio-8080-exec-10] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501062570ms
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:43 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501063145 ms)
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-2] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:37:43 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501063145ms
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:43 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501063743 ms)
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:43 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:43 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=429 duration=1753501063743ms
+2025-07-26 10:37:45 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:37:45 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501065972 ms)
+2025-07-26 10:37:45 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:37:45 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:37:45 DEBUG [http-nio-8080-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:37:45 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:37:45 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=429 duration=1753501065972ms
+2025-07-26 10:40:06 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:06 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501206278 ms)
+2025-07-26 10:40:06 DEBUG [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:06 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:06 DEBUG [http-nio-8080-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:06 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:06 DEBUG [http-nio-8080-exec-5] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:06 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501206278ms
+2025-07-26 10:40:08 DEBUG [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:08 INFO  [http-nio-8080-exec-7] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501208543 ms)
+2025-07-26 10:40:08 DEBUG [http-nio-8080-exec-7] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:08 DEBUG [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:08 DEBUG [http-nio-8080-exec-7] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:08 DEBUG [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:08 DEBUG [http-nio-8080-exec-7] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:08 INFO  [http-nio-8080-exec-7] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501208543ms
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:09 INFO  [http-nio-8080-exec-8] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501209169 ms)
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-8] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-8] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-8] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:09 INFO  [http-nio-8080-exec-8] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501209169ms
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:09 INFO  [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501209777 ms)
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-9] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:09 DEBUG [http-nio-8080-exec-9] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:09 INFO  [http-nio-8080-exec-9] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501209777ms
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:10 INFO  [http-nio-8080-exec-10] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501210344 ms)
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-10] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-10] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-10] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:10 INFO  [http-nio-8080-exec-10] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501210344ms
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:10 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501210940 ms)
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-2] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:10 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-2] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:11 INFO  [http-nio-8080-exec-2] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501210940ms
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:11 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501211568 ms)
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-1] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:11 DEBUG [http-nio-8080-exec-1] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:11 INFO  [http-nio-8080-exec-1] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501211568ms
+2025-07-26 10:40:12 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:12 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501212184 ms)
+2025-07-26 10:40:12 DEBUG [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:12 DEBUG [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:12 DEBUG [http-nio-8080-exec-3] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:12 DEBUG [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:12 DEBUG [http-nio-8080-exec-3] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:12 INFO  [http-nio-8080-exec-3] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501212184ms
+2025-07-26 10:40:13 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:13 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501213790 ms)
+2025-07-26 10:40:13 DEBUG [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:13 DEBUG [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:13 DEBUG [http-nio-8080-exec-4] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:13 DEBUG [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:13 DEBUG [http-nio-8080-exec-4] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:13 INFO  [http-nio-8080-exec-4] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501213790ms
+2025-07-26 10:40:14 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:14 INFO  [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501214490 ms)
+2025-07-26 10:40:14 DEBUG [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:14 DEBUG [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:14 DEBUG [http-nio-8080-exec-6] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:14 DEBUG [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:14 DEBUG [http-nio-8080-exec-6] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-26 10:40:14 INFO  [http-nio-8080-exec-6] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=200 duration=1753501214490ms
+2025-07-26 10:40:15 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-26 10:40:15 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Request] /api/v1/authenticate POST (1753501215227 ms)
+2025-07-26 10:40:15 DEBUG [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-26 10:40:15 DEBUG [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-26 10:40:15 DEBUG [http-nio-8080-exec-5] o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 628A9E011ACAD15D866A4D5CD7DF2221
+2025-07-26 10:40:15 DEBUG [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-26 10:40:15 INFO  [http-nio-8080-exec-5] o.e.config.JWTAuthenticationFilter - [Response] method=POST path=/api/v1/authenticate status=429 duration=1753501215227ms

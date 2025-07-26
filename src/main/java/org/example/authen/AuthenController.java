@@ -41,4 +41,9 @@ public class AuthenController {
     public ResponseEntity<List<UserDetails>> getAllUser() {
         return ResponseEntity.ok(authenService.getAllUser());
     }
+
+    @GetMapping("own")
+    public ResponseEntity<UserDetails> getUserData() {
+        return ResponseEntity.ok(authenService.getUser());
+    }
 }
