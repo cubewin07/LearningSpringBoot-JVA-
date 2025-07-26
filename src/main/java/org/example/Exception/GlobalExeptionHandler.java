@@ -41,5 +41,15 @@ public class GlobalExeptionHandler {
         return new ResponseEntity<>(error, HttpStatus.CONFLICT);
     }
 
+    @ExceptionHandler(TooManyRequest.class)
+    public ResponseEntity<ErrorRes> handleTooManyRequestSent(TooManyRequest ex){
+        ErrorRes error = new ErrorRes(
+                HttpStatus.TOO_MANY_REQUESTS.value(),
+                ex.getMessage(),
+                System.currentTimeMillis()
+        );
+
+        return new ResponseEntity<>(error, HttpStatus.TOO_MANY_REQUESTS);
+    }
 }
 
