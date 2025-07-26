@@ -1,13 +1,10 @@
 package org.example.rate_limiting;
-
-import io.github.bucket4j.Bandwidth;
 import io.github.bucket4j.Bucket;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 @Component
 public class RateLimiterService {
