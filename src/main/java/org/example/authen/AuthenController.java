@@ -43,7 +43,11 @@ public class AuthenController {
     }
 
     @GetMapping("own")
-    public ResponseEntity<UserDetails> getUserData() {
-        return ResponseEntity.ok(authenService.getUser());
+    public ResponseEntity<UserDetails> getUserData(@RequestHeader("Authorization") String token) {
+        Bucket bucket = rateLimiterService.resolveBucket(token);
+        if(!bucket.tryConsume(1)) {
+            throw new TooManyRequest("You many request sent, please try again after a minute");
+        }
+        return ResponseEntity.ok(authenService.getUser(token));
     }
 }
