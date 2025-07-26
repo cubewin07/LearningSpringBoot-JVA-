@@ -42,7 +42,7 @@ public class AuthenController {
         return ResponseEntity.ok(authenService.getAllUser());
     }
 
-    @GetMapping("own")
+    @GetMapping("/own")
     public ResponseEntity<UserDetails> getUserData(@RequestHeader("Authorization") String token) {
         Bucket bucket = rateLimiterService.resolveBucket(token);
         if(!bucket.tryConsume(1)) {
