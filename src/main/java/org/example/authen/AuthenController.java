@@ -1,6 +1,8 @@
 package org.example.authen;
 
+import io.github.bucket4j.Bucket;
 import lombok.RequiredArgsConstructor;
+import org.example.rate_limiting.RateLimiterService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -14,14 +16,23 @@ import java.util.List;
 public class AuthenController {
 
     private final AuthenService authenService;
+    private final RateLimiterService rateLimiterService;
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse>  registerUser(@RequestBody RegisterRequest request) {
+        Bucket bucket = rateLimiterService.resolveBucket(request.email());
+        if(!bucket.tryConsume(1)) {
+            throw new TooManyRequest("You many request sent, please try again after a minute");
+        }
         return ResponseEntity.ok(authenService.registerUser(request));
     }
 
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticateUser(@RequestBody AuthenticationRequest request) {
+        Bucket bucket = rateLimiterService.resolveBucket(request.email());
+        if(!bucket.tryConsume(1)) {
+            throw new TooManyRequest("You many request sent, please try again after a minute");
+        }
         return ResponseEntity.ok(authenService.authenticateUser(request));
     }
 
