@@ -2,6 +2,7 @@ package org.example.authen;
 
 import io.github.bucket4j.Bucket;
 import lombok.RequiredArgsConstructor;
+import org.example.Exception.TooManyRequest;
 import org.example.rate_limiting.RateLimiterService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
