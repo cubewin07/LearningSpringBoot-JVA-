@@ -1,6 +1,10 @@
 package org.example.user;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.hibernate.annotations.Check;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,8 +27,11 @@ public class User implements UserDetails {
     @SequenceGenerator(name = "user_id_seq", sequenceName = "user_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "user_id_seq")
     private Long id;
+    @NotNull(message = "Name can't be null")
     private String name;
+    @Email(message = "Email must be valid")
     private String email;
+    @Size(min = 6, message = "Password must be at least 6 characters long")
     private String password;
 
 
