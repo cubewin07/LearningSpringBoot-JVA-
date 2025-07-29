@@ -1,6 +1,7 @@
 package org.example.authen;
 
 import io.github.bucket4j.Bucket;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.Exception.TooManyRequest;
 import org.example.rate_limiting.RateLimiterService;
@@ -20,7 +21,7 @@ public class AuthenController {
     private final RateLimiterService rateLimiterService;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse>  registerUser(@RequestBody RegisterRequest request) {
+    public ResponseEntity<AuthenticationResponse>  registerUser(@Valid @RequestBody RegisterRequest request) {
         Bucket bucket = rateLimiterService.resolveBucket(request.email());
         if(!bucket.tryConsume(1)) {
             throw new TooManyRequest("You many request sent, please try again after a minute");
@@ -29,7 +30,7 @@ public class AuthenController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponse> authenticateUser(@RequestBody AuthenticationRequest request) {
+    public ResponseEntity<AuthenticationResponse> authenticateUser(@Valid @RequestBody AuthenticationRequest request) {
         Bucket bucket = rateLimiterService.resolveBucket(request.email());
         if(!bucket.tryConsume(1)) {
             throw new TooManyRequest("You many request sent, please try again after a minute");
