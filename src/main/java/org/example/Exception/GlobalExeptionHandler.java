@@ -5,6 +5,7 @@ import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -56,9 +57,13 @@ public class GlobalExeptionHandler {
         return new ResponseEntity<>(error, HttpStatus.TOO_MANY_REQUESTS);
     }
 
+    public String formatFieldError(FieldError error) {
+        return error.getField() + ": " + error.getDefaultMessage();
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorRes> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex){
-        List<String> errors = ex.getBindingResult().getFieldErrors().stream().map(fieldError -> fieldError.getField() + ": " + fieldError.getDefaultMessage()).toList();
+        List<String> errors = ex.getBindingResult().getFieldErrors().stream().map(this::formatFieldError).toList();
         ErrorRes error = new ErrorRes(
                 HttpStatus.BAD_REQUEST.value(),
                 errors,
