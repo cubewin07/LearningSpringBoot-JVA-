@@ -102,4 +102,24 @@ public class UserIntegrationTest {
         System.out.println(result.getResponse().getContentAsString());
 
     }
+
+    @Test
+    @Order(4)
+    public void enrollCourse() throws Exception{
+        String request = """
+                    {
+                        "email": "thang071208@gmail.com",
+                        "courseId": 1
+                    }
+                    """;
+        MvcResult result = mockMvc.perform(post("/api/v1/enrollCourse")
+                .contentType("application/json")
+                .content(request)
+        )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.courseId").value(1))
+                .andExpect(jsonPath("$.name").value("Java"))
+                .andExpect(jsonPath("$.description").value("120 minutes"))
+                .andReturn();
+    }
 }
