@@ -121,5 +121,7 @@ public class UserIntegrationTest {
                 .andExpect(jsonPath("$.name").value("Java"))
                 .andExpect(jsonPath("$.description").value("120 minutes"))
                 .andReturn();
+
+        System.out.println(result.getResponse().getContentAsString());
     }
 }
