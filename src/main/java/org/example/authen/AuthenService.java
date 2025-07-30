@@ -5,6 +5,7 @@ import org.example.Exception.ResembleEmailFound;
 import org.example.Exception.UsernameNotFound;
 import org.example.config.JwtService;
 import org.example.course.Course;
+import org.example.course.CourseRepository;
 import org.example.user.Role;
 import org.example.user.User;
 import org.example.user.UserRepository;
@@ -25,6 +26,7 @@ public class AuthenService {
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
+    private final CourseRepository courseRepository;
 
     public AuthenticationResponse registerUser(RegisterRequest request) {
         if(userRepository.existsByEmail(request.email())) {
@@ -70,9 +72,10 @@ public class AuthenService {
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
     }
 
-    public List<Course> enrollCourse(CourseRequest data) {
+    public Course enrollCourse(CourseRequest data) {
         User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
-        List<Course> courses = new ArrayList<>();
-        user.getCourses().add()
+        Course courses = courseRepository.findById(data.courseId()).orElseThrow(() -> new UsernameNotFound("Course not found"));
+        user.getCourses().add(courses);
+        return courses;
     }
 }
