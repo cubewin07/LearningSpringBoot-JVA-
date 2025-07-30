@@ -41,6 +41,7 @@ public class User implements UserDetails {
     private Role role;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @Builder.Default
     private List<Course> courses = new ArrayList<>();
 
     @Override
