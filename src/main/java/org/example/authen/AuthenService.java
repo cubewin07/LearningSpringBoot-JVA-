@@ -73,7 +73,7 @@ public class AuthenService {
         String username = jwtService.extractUsername(token);
         User user = userRepository.findByEmailWithCourses(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
-        List<CourseDTO> courseDTOs = user.getCourses().stream().map(course -> CourseDTO.builder().id(course.getId()).name(course.getName()).build()).toList();
+        List<CourseDTO> courseDTOs = user.getCourses().stream().map(course -> CourseDTO.builder().id(course.getId()).name(course.getName()).duration(course.getDuration() + " minutes").build()).toList();
         return UserDTO.builder()
                 .name(user.getName())
                 .email(user.getEmail())
