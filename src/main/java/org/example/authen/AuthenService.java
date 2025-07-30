@@ -72,10 +72,14 @@ public class AuthenService {
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
     }
 
-    public Course enrollCourse(CourseRequest data) {
+    public CourseResponse enrollCourse(CourseRequest data) {
         User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
         Course courses = courseRepository.findById(data.courseId()).orElseThrow(() -> new UsernameNotFound("Course not found"));
         user.getCourses().add(courses);
-        return courses;
+        return CourseResponse.builder()
+                .courseId(courses.getId())
+                .name(courses.getName())
+                .description(courses.getDuration() + " minutes")
+                .build();
     }
 }

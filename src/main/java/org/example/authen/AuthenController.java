@@ -55,7 +55,7 @@ public class AuthenController {
     }
 
     @PostMapping("/enrollCourse")
-    public ResponseEntity<Course> enrollCourse(@RequestBody CourseRequest data) {
+    public ResponseEntity<CourseResponse> enrollCourse(@RequestBody CourseRequest data) {
         return ResponseEntity.ok(authenService.enrollCourse(data));
     }
 }
