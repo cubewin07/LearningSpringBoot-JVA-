@@ -19,7 +19,7 @@ import org.junit.jupiter.api.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-
+import org.example.user.User;
 
 @SpringBootTest(properties = "spring.profiles.active=test")
 @AutoConfigureMockMvc
@@ -38,6 +38,7 @@ public class UserIntegrationTest {
     @Autowired
     private MockMvc mockMvc;
 
+    private static String JwtToken;
 
     @Test
     @Order(1)
@@ -76,8 +77,9 @@ public class UserIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.token").exists())
                 .andReturn();
-        String token = result.getResponse().getContentAsString();
-        System.out.println(token);
+        String responseBody = result.getResponse().getContentAsString();
+        JwtToken = responseBody.substring(responseBody.indexOf(":\"") + 2, responseBody.lastIndexOf("\""));
+        System.out.println(responseBody);
 
     }
 
@@ -123,5 +125,12 @@ public class UserIntegrationTest {
                 .andReturn();
 
         System.out.println(result.getResponse().getContentAsString());
+    }
+
+    @Test
+    @Order(5)
+    public void getUser() {
+        User user = (User) userRepository.findByEmail("thang071208@gmail.com").orElseThrow();
+        System.out.println(user);
     }
 }
