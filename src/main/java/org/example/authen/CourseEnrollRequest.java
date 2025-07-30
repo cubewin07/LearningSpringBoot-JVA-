@@ -1,6 +1,6 @@
 package org.example.authen;
 
-public record CourseRequest(
+public record CourseEnrollRequest(
         String email,
         Long courseId
 )

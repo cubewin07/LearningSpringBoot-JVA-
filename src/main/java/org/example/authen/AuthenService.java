@@ -14,7 +14,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +71,7 @@ public class AuthenService {
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
     }
 
-    public CourseResponse enrollCourse(CourseRequest data) {
+    public CourseResponse enrollCourse(CourseEnrollRequest data) {
         User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
         Course courses = courseRepository.findById(data.courseId()).orElseThrow(() -> new UsernameNotFound("Course not found"));
         user.getCourses().add(courses);
