@@ -1081,3 +1081,101 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation "users" does not e
 2025-07-30 10:38:47 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
 2025-07-30 10:38:47 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/enrollCourse
 2025-07-30 10:38:47 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753846727096ms
+2025-07-30 10:57:11 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - relation "users_courses" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - relation "users_courses" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "courses" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "users_courses" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - sequence "course_id_seq" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:57:11 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - sequence "user_id_seq" does not exist, skipping
+2025-07-30 10:57:11 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-30 10:57:12 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25a2a71d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27215154, org.springframework.security.web.context.SecurityContextHolderFilter@796434a3, org.springframework.security.web.header.HeaderWriterFilter@648639f1, org.springframework.web.filter.CorsFilter@6bca3b27, org.springframework.security.web.authentication.logout.LogoutFilter@f1b0658, org.example.config.JWTAuthenticationFilter@5b908c6d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11c82829, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72c8de78, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25bd8eab, org.springframework.security.web.session.SessionManagementFilter@4d45b457, org.springframework.security.web.access.ExceptionTranslationFilter@10cb1b89, org.springframework.security.web.access.intercept.AuthorizationFilter@5fd0235c]
+2025-07-30 10:57:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/register
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847832572 ms)
+2025-07-30 10:57:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:57:12 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/register
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847832572ms
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847832791 ms)
+2025-07-30 10:57:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:57:12 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-30 10:57:12 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847832791ms
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/course
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847832926 ms)
+2025-07-30 10:57:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:57:12 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/course
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847832926ms
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/enrollCourse
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847832935 ms)
+2025-07-30 10:57:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:57:12 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/enrollCourse
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847832935ms
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Securing GET /api/v1/own
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  GET (1753847832953 ms)
+2025-07-30 10:57:12 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGFuZzA3MTIwOEBnbWFpbC5jb20iLCJpYXQiOjE3NTM4NDc4MzIsImV4cCI6MTc1Mzg4MzgzMn0.9mmqT1rxtEVe109gsRdVQH7rkJceAqzZt2WpXIfTPFM
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - Authenticated user: thang071208@gmail.com
+2025-07-30 10:57:12 DEBUG [main] o.s.security.web.FilterChainProxy - Secured GET /api/v1/own
+2025-07-30 10:57:12 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=GET path= status=200 duration=org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@6a8b47acms
+2025-07-30 10:59:24 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - relation "users_courses" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - relation "users_courses" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "courses" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "users_courses" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - sequence "course_id_seq" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-07-30 10:59:25 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - sequence "user_id_seq" does not exist, skipping
+2025-07-30 10:59:25 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-30 10:59:25 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27215154, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bca3b27, org.springframework.security.web.context.SecurityContextHolderFilter@1626612d, org.springframework.security.web.header.HeaderWriterFilter@210e971e, org.springframework.web.filter.CorsFilter@25bd8eab, org.springframework.security.web.authentication.logout.LogoutFilter@4870d2e1, org.example.config.JWTAuthenticationFilter@76379796, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34c21c34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22912968, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15974f4e, org.springframework.security.web.session.SessionManagementFilter@5c1605e2, org.springframework.security.web.access.ExceptionTranslationFilter@19b7852b, org.springframework.security.web.access.intercept.AuthorizationFilter@6e1d939e]
+2025-07-30 10:59:25 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/register
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847966118 ms)
+2025-07-30 10:59:26 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:59:26 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/register
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847966118ms
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847966323 ms)
+2025-07-30 10:59:26 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:59:26 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-30 10:59:26 DEBUG [main] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847966323ms
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/course
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847966455 ms)
+2025-07-30 10:59:26 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:59:26 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/course
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847966455ms
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Securing POST /api/v1/enrollCourse
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753847966464 ms)
+2025-07-30 10:59:26 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-30 10:59:26 DEBUG [main] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Secured POST /api/v1/enrollCourse
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753847966464ms
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Securing GET /api/v1/own
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Request]  GET (1753847966478 ms)
+2025-07-30 10:59:26 DEBUG [main] o.e.config.JWTAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGFuZzA3MTIwOEBnbWFpbC5jb20iLCJpYXQiOjE3NTM4NDc5NjYsImV4cCI6MTc1Mzg4Mzk2Nn0.RkX1Kh70s6344pf_eu-Mdk0GeWkAsKtDoIAFwxWALXM
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - Authenticated user: thang071208@gmail.com
+2025-07-30 10:59:26 DEBUG [main] o.s.security.web.FilterChainProxy - Secured GET /api/v1/own
+2025-07-30 10:59:26 INFO  [main] o.e.config.JWTAuthenticationFilter - [Response] method=GET path= status=200 duration=org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@2461a62cms

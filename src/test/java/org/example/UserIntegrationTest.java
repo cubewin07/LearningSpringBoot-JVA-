@@ -40,7 +40,7 @@ public class UserIntegrationTest {
     @Autowired
     private MockMvc mockMvc;
 
-    private static String JwtToken;
+    private static String jwtToken;
 
     @Test
     @Order(1)
@@ -80,7 +80,7 @@ public class UserIntegrationTest {
                 .andExpect(jsonPath("$.token").exists())
                 .andReturn();
         String responseBody = result.getResponse().getContentAsString();
-        JwtToken = responseBody.substring(responseBody.indexOf(":\"") + 2, responseBody.lastIndexOf("\""));
+        jwtToken = responseBody.substring(responseBody.indexOf(":\"") + 2, responseBody.lastIndexOf("\""));
         System.out.println(responseBody);
 
     }
@@ -131,11 +131,17 @@ public class UserIntegrationTest {
 
     @Test
     @Order(5)
-    public void getUser() {
+    public void getUser() throws Exception {
         MvcResult result = mockMvc.perform(get("/api/v1/own")
                 .header("Authorization", "Bearer " + jwtToken)
         )
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$name"))
+                .andExpect(jsonPath("$.name").value("Thang"))
+                .andExpect(jsonPath("$.email").value("thang071208@gmail.com"))
+                .andExpect(jsonPath("$.courses").exists())
+                .andReturn();
+        System.out.println(result.getResponse().getContentAsString());
     }
+
+
 }
