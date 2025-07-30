@@ -80,4 +80,26 @@ public class UserIntegrationTest {
         System.out.println(token);
 
     }
+
+    @Test
+    @Order(3)
+    public void addingNewCourse() throws Exception{
+        String request = """
+                    {
+                        "name": "Java",
+                        "duration": 120
+                    }
+                """;
+        MvcResult result = mockMvc.perform(post("/api/v1/course")
+                .contentType("apllication/json")
+                .content(request)
+        )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").exists())
+                .andExpect(jsonPath("$.name").value("Java"))
+                .andExpect(jsonPath("$.duration").value("120 minutes"))
+                .andReturn();
+        System.out.println(result.getResponse().getContentAsString());
+
+    }
 }
