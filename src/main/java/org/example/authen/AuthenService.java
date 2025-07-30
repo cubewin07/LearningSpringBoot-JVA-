@@ -82,7 +82,7 @@ public class AuthenService {
         return CourseDTO.builder()
                 .id(course.getId())
                 .name(course.getName())
-                .duration(data.duration() + "minutes")
+                .duration(data.duration() + " minutes")
                 .build();
     }
 
