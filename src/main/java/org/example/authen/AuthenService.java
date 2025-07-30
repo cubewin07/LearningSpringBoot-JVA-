@@ -5,7 +5,9 @@ import org.example.Exception.ResembleEmailFound;
 import org.example.Exception.UsernameNotFound;
 import org.example.config.JwtService;
 import org.example.course.Course;
+import org.example.course.CourseDTO;
 import org.example.course.CourseRepository;
+import org.example.course.CourseRequest;
 import org.example.user.Role;
 import org.example.user.User;
 import org.example.user.UserRepository;
@@ -69,6 +71,19 @@ public class AuthenService {
         String username = jwtService.extractUsername(token);
         return userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
+    }
+
+    public CourseDTO addCourse(CourseRequest data) {
+        Course course = Course.builder()
+                .name(data.name())
+                .duration(data.duration())
+                .build();
+        courseRepository.save(course);
+        return CourseDTO.builder()
+                .id(course.getId())
+                .name(course.getName())
+                .duration(data.duration() + "minutes")
+                .build();
     }
 
     public CourseResponse enrollCourse(CourseEnrollRequest data) {
