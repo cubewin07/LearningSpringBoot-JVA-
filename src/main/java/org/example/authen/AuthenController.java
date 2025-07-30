@@ -4,6 +4,7 @@ import io.github.bucket4j.Bucket;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.Exception.TooManyRequest;
+import org.example.course.CourseRequest;
 import org.example.rate_limiting.RateLimiterService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -50,6 +51,11 @@ public class AuthenController {
         }
         String token = BearerToken.substring(7);
         return ResponseEntity.ok(authenService.getUser(token));
+    }
+
+    @PostMapping("/course")
+    public ResponseEntity<CourseResponse> addCourse(@RequestBody CourseRequest data) {
+        return ResponseEntity.ok(authenService.addCourse(data));
     }
 
     @PostMapping("/enrollCourse")
