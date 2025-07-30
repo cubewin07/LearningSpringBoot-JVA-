@@ -11,6 +11,7 @@ import org.example.course.CourseRepository;
 import org.example.course.CourseRequest;
 import org.example.user.Role;
 import org.example.user.User;
+import org.example.user.UserDTO;
 import org.example.user.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -68,12 +69,17 @@ public class AuthenService {
             return new ArrayList<UserDetails>(users);
     }
 
-    public User getUser(String token) {
+    public UserDTO getUser(String token) {
         String username = jwtService.extractUsername(token);
         User user = userRepository.findByEmailWithCourses(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
         List<CourseDTO> courseDTOs = user.getCourses().stream().map(course -> CourseDTO.builder().id(course.getId()).name(course.getName()).build()).toList();
-        return user;
+        return UserDTO.builder()
+                .name(user.getName())
+                .email(user.getEmail())
+                .courses(courseDTOs)
+                .role(user.getRole())
+                .build();
     }
 
     public CourseDTO addCourse(CourseRequest data) {

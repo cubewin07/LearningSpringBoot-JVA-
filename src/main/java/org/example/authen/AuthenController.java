@@ -8,6 +8,7 @@ import org.example.course.CourseDTO;
 import org.example.course.CourseRequest;
 import org.example.rate_limiting.RateLimiterService;
 import org.example.user.User;
+import org.example.user.UserDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
@@ -46,7 +47,7 @@ public class AuthenController {
     }
 
     @GetMapping("/own")
-    public ResponseEntity<User> getUserData(@RequestHeader("Authorization") String BearerToken) {
+    public ResponseEntity<UserDTO> getUserData(@RequestHeader("Authorization") String BearerToken) {
         Bucket bucket = rateLimiterService.resolveBucket(BearerToken);
         if(!bucket.tryConsume(1)) {
             throw new TooManyRequest("You many request sent, please try again after a minute");
