@@ -91,7 +91,7 @@ public class UserIntegrationTest {
                     }
                 """;
         MvcResult result = mockMvc.perform(post("/api/v1/course")
-                .contentType("apllication/json")
+                .contentType("application/json")
                 .content(request)
         )
                 .andExpect(status().isOk())
