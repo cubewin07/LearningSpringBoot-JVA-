@@ -67,9 +67,9 @@ public class AuthenService {
             return new ArrayList<UserDetails>(users);
     }
 
-    public UserDetails getUser(String token) {
+    public User getUser(String token) {
         String username = jwtService.extractUsername(token);
-        return userRepository.findByEmail(username)
+        return (User)userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
     }
 

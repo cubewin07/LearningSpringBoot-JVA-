@@ -21,6 +21,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.example.user.User;
 
+import javax.net.ssl.SSLEngineResult;
+
 @SpringBootTest(properties = "spring.profiles.active=test")
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -130,7 +132,10 @@ public class UserIntegrationTest {
     @Test
     @Order(5)
     public void getUser() {
-        User user = (User) userRepository.findByEmail("thang071208@gmail.com").orElseThrow();
-        System.out.println(user);
+        MvcResult result = mockMvc.perform(get("/api/v1/own")
+                .header("Authorization", "Bearer " + jwtToken)
+        )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$name"))
     }
 }
