@@ -1,5 +1,6 @@
 package org.example.authen;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.example.Exception.ResembleEmailFound;
 import org.example.Exception.UsernameNotFound;
@@ -86,6 +87,7 @@ public class AuthenService {
                 .build();
     }
 
+    @Transactional
     public CourseResponse enrollCourse(CourseEnrollRequest data) {
         User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
         Course courses = courseRepository.findById(data.courseId()).orElseThrow(() -> new UsernameNotFound("Course not found"));
