@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.example.authen.AuthenService;
 import org.example.authen.RegisterRequest;
 import org.example.config.JwtService;
+import org.example.course.CourseRepository;
 import org.example.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.engine.TestExecutionResult;
@@ -31,6 +32,8 @@ public class UserIntegrationTest {
     private AuthenService authenService;
     @Autowired
     private JwtService jwtService;
+    @Autowired
+    private CourseRepository courseRepository;
 
     @Autowired
     private MockMvc mockMvc;
