@@ -4,6 +4,7 @@ import io.github.bucket4j.Bucket;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.Exception.TooManyRequest;
+import org.example.course.CourseDTO;
 import org.example.course.CourseRequest;
 import org.example.rate_limiting.RateLimiterService;
 import org.springframework.http.ResponseEntity;
@@ -54,7 +55,7 @@ public class AuthenController {
     }
 
     @PostMapping("/course")
-    public ResponseEntity<CourseResponse> addCourse(@RequestBody CourseRequest data) {
+    public ResponseEntity<CourseDTO> addCourse(@RequestBody CourseRequest data) {
         return ResponseEntity.ok(authenService.addCourse(data));
     }
 
