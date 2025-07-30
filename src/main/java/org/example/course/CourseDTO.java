@@ -6,6 +6,6 @@ import lombok.Builder;
 public record CourseDTO(
         Long id,
         String name,
-        Long duration
+        String duration
 )
 {}
