@@ -45,7 +45,7 @@ public class UserIntegrationTest {
         String requestBody = """
                 {
                     "name": "Thang",
-                    "password": "12334",
+                    "password": "123456",
                     "email": "thang071208@gmail.com"
                 }""";
         MvcResult res = mockMvc.perform(post("/api/v1/register")
@@ -66,7 +66,7 @@ public class UserIntegrationTest {
         String request = """
                     {
                         "email": "thang071208@gmail.com",
-                        "password": "12334"
+                        "password": "123456"
                     }
                 """;
         MvcResult result = mockMvc.perform(post("/api/v1/authenticate")

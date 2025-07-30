@@ -18,7 +18,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-@Check(constraints = "char_length(password) >= 6 AND age >= 10 ")
+@Check(constraints = "char_length(password) >= 6")
 @Data
 @Builder
 @NoArgsConstructor
