@@ -1,6 +1,7 @@
 package org.example.course;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +13,7 @@ import java.util.List;
 @Entity
 @Data
 @RequiredArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Course {
 
@@ -23,6 +25,6 @@ public class Course {
     private final Long duration;
 
     @ManyToMany(mappedBy = "courses")
-    private List<User> users = new ArrayList<>();
+    private List<User> users;
 
 }
