@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.Exception.ResembleEmailFound;
 import org.example.Exception.UsernameNotFound;
 import org.example.config.JwtService;
+import org.example.course.Course;
 import org.example.user.Role;
 import org.example.user.User;
 import org.example.user.UserRepository;
@@ -67,5 +68,11 @@ public class AuthenService {
         String username = jwtService.extractUsername(token);
         return userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
+    }
+
+    public List<Course> enrollCourse(CourseRequest data) {
+        User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
+        List<Course> courses = new ArrayList<>();
+        user.getCourses().add()
     }
 }
