@@ -33,7 +33,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     // PostgreSQL
-    implementation 'org.postgresql:postgresql:42.7.3'
+    runtimeOnly 'org.postgresql:postgresql:42.7.3'
 
     // Validation
     implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
