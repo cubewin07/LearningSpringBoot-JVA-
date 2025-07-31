@@ -15,10 +15,6 @@ java {
 
 repositories {
     mavenCentral()
-    maven {
-        name = 'spring-milestones'
-        url = 'https://repo.spring.io/milestone'
-    }
 }
 
 ext {
