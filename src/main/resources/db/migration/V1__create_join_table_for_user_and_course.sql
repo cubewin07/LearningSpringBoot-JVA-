@@ -1,7 +1,7 @@
 create table users_courses (
-    user_id BIGINT NOT NULL,
-    course_id BIGINT NOT NULL,
-    PRIMARY KEY (user_id, course_id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (course_id) REFERENCES courses(id)
+    users_id BIGINT NOT NULL,
+    courses_id BIGINT NOT NULL,
+    PRIMARY KEY (users_id, courses_id),
+    FOREIGN KEY (users_id) REFERENCES users(id),
+    FOREIGN KEY (courses_id) REFERENCES courses(id)
 )
