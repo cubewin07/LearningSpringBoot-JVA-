@@ -68,7 +68,8 @@ dependencies {
     testImplementation 'com.h2database:h2'
 
     // FLyway
-    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-core:10.15.0'
+    implementation 'org.flywaydb:flyway-database-postgresql:10.15.0'
 }
 
 test {
