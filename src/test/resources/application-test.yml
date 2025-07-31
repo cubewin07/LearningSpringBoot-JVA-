@@ -1,5 +1,5 @@
 spring:
-  dataSourse:
+  datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
@@ -11,3 +11,11 @@ spring:
   h2:
     console:
       enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          context:
+            config: DEBUG

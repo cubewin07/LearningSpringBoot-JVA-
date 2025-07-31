@@ -67,6 +67,9 @@ dependencies {
     testImplementation 'com.h2database:h2'
     testImplementation 'org.springframework.security:spring-security-test'
     testImplementation 'com.jayway.jsonpath:json-path'
+
+    // Test H2 db
+    testImplementation 'com.h2database:h2'
 }
 
 test {

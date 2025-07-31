@@ -1590,3 +1590,79 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2025-07-31 11:32:04 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - Authenticated user: thang071208@gmail.com
 2025-07-31 11:32:04 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured GET /api/v1/own
 2025-07-31 11:32:04 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=GET path= status=200 duration=org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@37c47166ms
+2025-07-31 11:47:47 WARN  [Test worker] org.hibernate.dialect.Dialect - HHH000511: The 2.2.224 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-07-31 11:47:47 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31 11:47:47 INFO  [Test worker] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31 11:47:47 WARN  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-07-31 11:47:48 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31 11:47:48 INFO  [Test worker] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@680ebfb2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f542e08, org.springframework.security.web.context.SecurityContextHolderFilter@d2c8c3b, org.springframework.security.web.header.HeaderWriterFilter@353ab9e5, org.springframework.web.filter.CorsFilter@1bdf7cd4, org.springframework.security.web.authentication.logout.LogoutFilter@26420ed1, org.example.config.JWTAuthenticationFilter@483f19c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fc0f3c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31dd8a0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1aaf3aa1, org.springframework.security.web.session.SessionManagementFilter@78b5b2f9, org.springframework.security.web.access.ExceptionTranslationFilter@17fe4f0f, org.springframework.security.web.access.intercept.AuthorizationFilter@2a0c9309]
+2025-07-31 11:47:48 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-31 11:47:48 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/register
+2025-07-31 11:47:48 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937268763 ms)
+2025-07-31 11:47:48 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:47:48 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:47:48 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/register
+2025-07-31 11:47:48 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937268763ms
+2025-07-31 11:47:48 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-31 11:47:48 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937268955 ms)
+2025-07-31 11:47:48 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:47:48 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:47:48 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937268955ms
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/course
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937269084 ms)
+2025-07-31 11:47:49 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/course
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937269084ms
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/enrollCourse
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937269095 ms)
+2025-07-31 11:47:49 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/enrollCourse
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937269095ms
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing GET /api/v1/own
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  GET (1753937269106 ms)
+2025-07-31 11:47:49 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGFuZzA3MTIwOEBnbWFpbC5jb20iLCJpYXQiOjE3NTM5MzcyNjksImV4cCI6MTc1Mzk3MzI2OX0.eD5qH6iBO-n2FosHUkdM5aI3RNXfxr9FgItjsWi46no
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - Authenticated user: thang071208@gmail.com
+2025-07-31 11:47:49 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured GET /api/v1/own
+2025-07-31 11:47:49 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=GET path= status=200 duration=org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@3504fbfems
+2025-07-31 11:50:37 WARN  [Test worker] org.hibernate.dialect.Dialect - HHH000511: The 2.2.224 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-07-31 11:50:37 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31 11:50:37 INFO  [Test worker] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-07-31 11:50:37 WARN  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-07-31 11:50:37 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31 11:50:38 INFO  [Test worker] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50f88cea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2654f4aa, org.springframework.security.web.context.SecurityContextHolderFilter@3680cde9, org.springframework.security.web.header.HeaderWriterFilter@2ac42ce6, org.springframework.web.filter.CorsFilter@680ebfb2, org.springframework.security.web.authentication.logout.LogoutFilter@24028f51, org.example.config.JWTAuthenticationFilter@483f19c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74baaba6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7203fac0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f542e08, org.springframework.security.web.session.SessionManagementFilter@626a783b, org.springframework.security.web.access.ExceptionTranslationFilter@1fe8a2fc, org.springframework.security.web.access.intercept.AuthorizationFilter@641f9947]
+2025-07-31 11:50:38 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/register
+2025-07-31 11:50:38 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937438666 ms)
+2025-07-31 11:50:38 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/register
+2025-07-31 11:50:38 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937438666ms
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/authenticate
+2025-07-31 11:50:38 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937438871 ms)
+2025-07-31 11:50:38 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/authenticate
+2025-07-31 11:50:38 DEBUG [Test worker] o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-07-31 11:50:38 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937438871ms
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/course
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937439001 ms)
+2025-07-31 11:50:39 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/course
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937439001ms
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing POST /api/v1/enrollCourse
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753937439009 ms)
+2025-07-31 11:50:39 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured POST /api/v1/enrollCourse
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753937439009ms
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Securing GET /api/v1/own
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  GET (1753937439020 ms)
+2025-07-31 11:50:39 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGFuZzA3MTIwOEBnbWFpbC5jb20iLCJpYXQiOjE3NTM5Mzc0MzgsImV4cCI6MTc1Mzk3MzQzOH0.dNR0PHdqNVTS3t2961iyKwxzozKG8K3f0w70YKt-x2c
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - Authenticated user: thang071208@gmail.com
+2025-07-31 11:50:39 DEBUG [Test worker] o.s.security.web.FilterChainProxy - Secured GET /api/v1/own
+2025-07-31 11:50:39 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=GET path= status=200 duration=org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@3504fbfems
