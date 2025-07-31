@@ -23,5 +23,5 @@ create table users (
 create table courses (
     id BIGINT PRIMARY KEY DEFAULT nextval('course_id_seq'),
     name VARCHAR(255) NOT NULL,
-    duration BIGINT NOT NULL,
+    duration BIGINT NOT NULL
 );
