@@ -13,7 +13,7 @@ create sequence course_id_seq
     CACHE 1;
 
 create table users (
-    id BIGINT PRIMARY KEY DEFAULT nextval('user_id_seg'),
+    id BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
     name VARCHAR(255) NOT NULL ,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL CHECK(char_length(password) >= 6),
