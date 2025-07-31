@@ -66,6 +66,9 @@ dependencies {
 
     // Test H2 db
     testImplementation 'com.h2database:h2'
+
+    // FLyway
+    implementation 'org.flywaydb:flyway-core'
 }
 
 test {
