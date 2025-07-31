@@ -1741,3 +1741,28 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-07-31 13:14:52 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Securing GET /actuator/health
 2025-07-31 13:14:52 DEBUG [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
 2025-07-31 13:14:52 DEBUG [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy - Secured GET /actuator/health
+2025-07-31 13:20:26 WARN  [Test worker] org.hibernate.dialect.Dialect - HHH000511: The 2.2.224 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-07-31 13:20:26 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31 13:20:26 WARN  [Test worker] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-07-31 13:20:27 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-31 13:20:27 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-31 13:20:27 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753942827889 ms)
+2025-07-31 13:20:27 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753942827889ms
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753942828093 ms)
+2025-07-31 13:20:28 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753942828093ms
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753942828224 ms)
+2025-07-31 13:20:28 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753942828224ms
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  POST (1753942828231 ms)
+2025-07-31 13:20:28 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: null
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=POST path= status=200 duration=1753942828231ms
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Request]  GET (1753942828243 ms)
+2025-07-31 13:20:28 DEBUG [Test worker] o.e.config.JWTAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGFuZzA3MTIwOEBnbWFpbC5jb20iLCJpYXQiOjE3NTM5NDI4MjgsImV4cCI6MTc1Mzk3ODgyOH0.no1Uzh_tnQc2sV3szGOoKnmL_ZbOlOFOioDT6AKNHts
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - Authenticated user: thang071208@gmail.com
+2025-07-31 13:20:28 INFO  [Test worker] o.e.config.JWTAuthenticationFilter - [Response] method=GET path= status=200 duration=org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@2eedd575ms
+2025-07-31 13:49:16 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-31 13:49:17 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-07-31 13:49:17 WARN  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-07-31 13:49:17 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
