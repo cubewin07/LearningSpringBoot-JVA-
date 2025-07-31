@@ -1,6 +1,5 @@
 package org.example;
 
-import lombok.AllArgsConstructor;
 import org.example.authen.AuthenService;
 import org.example.authen.RegisterRequest;
 import org.example.config.JwtService;

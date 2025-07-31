@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.2.3'
+    id 'org.springframework.boot' version '3.3.0'
     id 'io.spring.dependency-management' version '1.1.4'
 }
 
@@ -8,8 +8,9 @@ group = 'org.example'
 version = '1.0-SNAPSHOT'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_23
-    targetCompatibility = JavaVersion.VERSION_23
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 repositories {
@@ -47,6 +48,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
+    // JUnit platform engine
+    testImplementation 'org.junit.platform:junit-platform-engine:1.10.2'
+
     // Swagger
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 
@@ -68,4 +72,8 @@ dependencies {
 test {
     useJUnitPlatform()
     jvmArgs += "-Dnet.bytebuddy.experimental=true"
+}
+
+springBoot {
+    mainClass = 'org.example.LearningJavaApplication' // ⬅️ Replace with your actual @SpringBootApplication class
 }
