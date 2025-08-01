@@ -45,8 +45,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
-    // JUnit platform engine
-    testImplementation 'org.junit.platform:junit-platform-engine:1.10.2'
+    // JUnit-jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
 
     // Swagger
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
