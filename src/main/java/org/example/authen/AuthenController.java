@@ -58,6 +58,10 @@ public class AuthenController {
 
     @PostMapping("/course")
     public ResponseEntity<CourseDTO> addCourse(@RequestBody CourseRequest data) {
+        Bucket bucket = rateLimiterService.resolveBucket(data.name());
+        if(!bucket.tryConsume(1)) {
+            throw new TooManyRequest("You many request sent, please try again after a minute");
+        }
         return ResponseEntity.ok(authenService.addCourse(data));
     }
 
