@@ -29,6 +29,9 @@ logging:
     root: WARN
     org.example.config: DEBUG
     org.springframework.boot.context.config: DEBUG
+    com.zaxxer.hikari: DEBUG
+    org.springframework.jdbc.datasource: DEBUG
+    org.hibernate.engine.jdbc.connections: DEBUG
   file:
     name: logs/myapp.log
   pattern:
