@@ -15,6 +15,7 @@ import java.sql.SQLTransientConnectionException;
 import java.util.List;
 
 @ControllerAdvice
+@Slf4j
 public class GlobalExeptionHandler {
 
     @ExceptionHandler(UsernameNotFound.class)
@@ -50,6 +51,7 @@ public class GlobalExeptionHandler {
 
     @ExceptionHandler(TooManyRequest.class)
     public ResponseEntity<ErrorRes> handleTooManyRequestSent(TooManyRequest ex){
+        log.error("Database connection timeout", ex);
         ErrorRes error = new ErrorRes(
                 HttpStatus.TOO_MANY_REQUESTS.value(),
                 ex.getMessage(),
