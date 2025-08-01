@@ -2,6 +2,7 @@ package org.example.Exception;
 
 
 import io.jsonwebtoken.ExpiredJwtException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.sql.SQLTransientConnectionException;
 import java.util.List;
 
 @ControllerAdvice
@@ -70,6 +72,16 @@ public class GlobalExeptionHandler {
                 System.currentTimeMillis()
         );
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(SQLTransientConnectionException.class)
+    public ResponseEntity<ErrorRes> handleSQLTransientConnectionException(SQLTransientConnectionException ex){
+        ErrorRes error = new ErrorRes(
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                "Database is currently busy or unavailable. Please try again later.",
+                System.currentTimeMillis()
+        );
+        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
 
