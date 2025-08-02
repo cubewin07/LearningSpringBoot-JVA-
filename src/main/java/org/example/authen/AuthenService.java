@@ -85,6 +85,8 @@ public class AuthenService {
                 .build();
     }
 
+    @Transactional
+    @Cacheable(value ="course", key="#data.name")
     public CourseDTO addCourse(CourseRequest data) {
         Course course = Course.builder()
                 .name(data.name())
