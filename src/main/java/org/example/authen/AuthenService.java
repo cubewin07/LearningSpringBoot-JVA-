@@ -13,6 +13,7 @@ import org.example.user.Role;
 import org.example.user.User;
 import org.example.user.UserDTO;
 import org.example.user.UserRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -64,6 +65,7 @@ public class AuthenService {
                 .build();
     }
 
+    @Cacheable(value ="admin", key="getAllUser" )
     public List<UserDetails> getAllUser() {
             List<User> users = userRepository.findAll();
             return new ArrayList<UserDetails>(users);
