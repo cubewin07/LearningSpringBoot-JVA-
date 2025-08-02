@@ -73,6 +73,10 @@ dependencies {
 //    flyway database will pull this transitively so no need implementing it
 //    implementation 'org.flywaydb:flyway-core:10.15.0'
     implementation 'org.flywaydb:flyway-database-postgresql:10.15.0'
+
+    //Redis
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 }
 
 flyway {
