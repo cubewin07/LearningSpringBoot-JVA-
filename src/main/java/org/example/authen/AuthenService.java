@@ -72,7 +72,7 @@ public class AuthenService {
             return new ArrayList<UserDetails>(users);
     }
 
-    @Cacheable(value ="user", key="#token" )
+    @Cacheable(value ="user", key="@jwtService.extractUsername(#token)" )
     public UserDTO getUser(String token) {
         String username = jwtService.extractUsername(token);
         User user = userRepository.findByEmail(username)
