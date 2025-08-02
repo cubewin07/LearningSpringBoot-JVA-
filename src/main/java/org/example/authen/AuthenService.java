@@ -13,6 +13,7 @@ import org.example.user.Role;
 import org.example.user.User;
 import org.example.user.UserDTO;
 import org.example.user.UserRepository;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -86,7 +87,7 @@ public class AuthenService {
     }
 
     @Transactional
-    @Cacheable(value ="course", key="#data.name")
+    @CachePut(value ="course", key="#data.name")
     public CourseDTO addCourse(CourseRequest data) {
         Course course = Course.builder()
                 .name(data.name())
