@@ -1,7 +1,7 @@
 package org.example.config;
 
 import lombok.RequiredArgsConstructor;
-import org.example.user.UserRepository;
+import org.example.user_service.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetails;

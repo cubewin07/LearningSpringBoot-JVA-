@@ -1,14 +1,19 @@
-package org.example.authen;
+package org.example.user_service.controlller;
 
 import io.github.bucket4j.Bucket;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.Exception.TooManyRequest;
 import org.example.course.CourseDTO;
+import org.example.course.CourseEnrollRequest;
 import org.example.course.CourseRequest;
+import org.example.course.CourseResponse;
 import org.example.rate_limiting.RateLimiterService;
-import org.example.user.User;
-import org.example.user.UserDTO;
+import org.example.user_service.model.AuthenticationRequest;
+import org.example.user_service.model.AuthenticationResponse;
+import org.example.user_service.model.RegisterRequest;
+import org.example.user_service.model.UserDTO;
+import org.example.user_service.service.AuthenService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;

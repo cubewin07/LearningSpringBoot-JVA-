@@ -1,4 +1,4 @@
-package org.example.authen;
+package org.example.user_service.model;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

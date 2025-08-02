@@ -2,9 +2,8 @@ package org.example.course;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.example.user.User;
+import org.example.user_service.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity

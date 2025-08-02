@@ -1,18 +1,13 @@
-package org.example.authen;
+package org.example.user_service.service;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.example.Exception.ResembleEmailFound;
 import org.example.Exception.UsernameNotFound;
 import org.example.config.JwtService;
-import org.example.course.Course;
-import org.example.course.CourseDTO;
-import org.example.course.CourseRepository;
-import org.example.course.CourseRequest;
-import org.example.user.Role;
-import org.example.user.User;
-import org.example.user.UserDTO;
-import org.example.user.UserRepository;
+import org.example.course.*;
+import org.example.user_service.model.*;
+import org.example.user_service.repository.UserRepository;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.AuthenticationManager;

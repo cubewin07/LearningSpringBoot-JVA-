@@ -1,4 +1,4 @@
-package org.example.authen;
+package org.example.course;
 
 import lombok.Builder;
 
