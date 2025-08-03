@@ -173,7 +173,7 @@
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.authen.*" />
+          <option name="PATTERN" value="org.example.user_service.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
