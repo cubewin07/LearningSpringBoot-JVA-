@@ -1,4 +1,4 @@
-package org.example.config;
+package org.example.multi_level_cache;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
