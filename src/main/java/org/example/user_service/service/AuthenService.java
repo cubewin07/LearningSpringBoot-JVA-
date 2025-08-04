@@ -8,6 +8,8 @@ import org.example.config.JwtService;
 import org.example.course.*;
 import org.example.user_service.model.*;
 import org.example.user_service.repository.UserRepository;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -27,6 +30,7 @@ public class AuthenService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final CourseRepository courseRepository;
+    private final CacheManager cacheManager;
 
     public AuthenticationResponse registerUser(RegisterRequest request) {
         if(userRepository.existsByEmail(request.email())) {
@@ -102,6 +106,8 @@ public class AuthenService {
         User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
         Course courses = courseRepository.findById(data.courseId()).orElseThrow(() -> new UsernameNotFound("Course not found"));
         user.getCourses().add(courses);
+        Cache cache = Objects.requireNonNull(cacheManager.getCache("user"));
+        cache.put(data.email(), user);
         return CourseResponse.builder()
                 .courseId(courses.getId())
                 .name(courses.getName())
