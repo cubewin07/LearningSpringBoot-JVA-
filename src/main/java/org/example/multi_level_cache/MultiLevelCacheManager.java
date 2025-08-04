@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MultiLevelCacheManager implements CacheManager {
     private final CacheManager caffeineCacheManager;
-    private final RedisCacheManager redisCacheManager;
+    private final CacheManager redisCacheManager;
 
 
     @Override
