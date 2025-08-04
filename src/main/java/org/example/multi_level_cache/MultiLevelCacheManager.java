@@ -3,7 +3,6 @@ package org.example.multi_level_cache;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
-import org.springframework.data.redis.cache.RedisCacheManager;
 
 import java.util.Collection;
 import java.util.List;

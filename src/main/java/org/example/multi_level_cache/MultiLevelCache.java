@@ -1,11 +1,13 @@
 package org.example.multi_level_cache;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.Cache;
 
 import java.util.concurrent.Callable;
 
 @RequiredArgsConstructor
+@Slf4j
 public class MultiLevelCache implements Cache {
     private final String name;
     private final Cache local;
@@ -24,37 +26,46 @@ public class MultiLevelCache implements Cache {
 
     @Override
     public ValueWrapper get(Object key) {
-        ValueWrapper localValue = local.get(key);
-        if(localValue != null) return localValue;
+        ValueWrapper value = local.get(key);
+        if (value != null) {
+            log.warn("🔥 Caffeine HIT: {}", key);
+            return value;
+        }
 
+        value = remote.get(key);
+        if (value != null) {
+            log.warn("🐘 Redis HIT: {}", key);
+            local.put(key, value.get()); // Repopulate Caffeine
+        } else {
+            log.warn("💥 Cache MISS: {}", key);
+        }
 
-        ValueWrapper remoteValue = remote.get(key);
-        if(remoteValue != null) local.put(key, remoteValue.get());
-        return remoteValue;
+        return value;
     }
 
     @Override
     public <T> T get(Object key, Class<T> type) {
-        T localValue = local.get(key, type);
-        if(localValue != null) return localValue;
-
-        T remoteValue = remote.get(key, type);
-        if(remoteValue != null) local.put(key, remoteValue);
-        return remoteValue;
+        ValueWrapper value = get(key); // delegate to custom logic
+        return (value != null ? (T) value.get() : null);
     }
 
     @Override
     public <T> T get(Object key, Callable<T> valueLoader) {
-        T localValue = local.get(key, valueLoader);
-        if(localValue != null) return localValue;
+        ValueWrapper value = get(key); // call our custom multi-level get
+        if (value != null) return (T) value.get();
 
-        T remoteValue = remote.get(key, valueLoader);
-        if(remoteValue != null) local.put(key, remoteValue);
-        return remoteValue;
+        try {
+            T loadedValue = valueLoader.call();
+            put(key, loadedValue);
+            return loadedValue;
+        } catch (Exception e) {
+            throw new ValueRetrievalException(key, valueLoader, e);
+        }
     }
 
     @Override
     public void put(Object key, Object value) {
+        System.out.println("Run" + name + " " + key + " " + value);
         local.put(key, value);
         remote.put(key, value);
     }
