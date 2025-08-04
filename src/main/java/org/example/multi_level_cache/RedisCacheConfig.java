@@ -14,7 +14,7 @@ import java.time.Duration;
 public class RedisCacheConfig {
 
     @Bean
-    public RedisCacheManager RedisCacheManager(RedisConnectionFactory factory) {
+    public RedisCacheManager redisCacheManager(RedisConnectionFactory factory) {
         KryoRedisSerializer<Object> kryoSerializer = new KryoRedisSerializer<>(Object.class);
         RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig()
                 .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))

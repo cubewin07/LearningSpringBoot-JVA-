@@ -3642,3 +3642,274 @@
 2025-08-04 09:34:59 DEBUG [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@38419fe5: (connection evicted)
 2025-08-04 09:34:59 DEBUG [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
 2025-08-04 09:34:59 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@2c854dc5
+
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - idleTimeout.....................30000
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/Learning
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - username........................"postgres"
+2025-08-04 10:19:59 DEBUG [main] com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-08-04 10:19:59 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 10:19:59 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43778371
+2025-08-04 10:19:59 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@126f37f8
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2025-08-04 10:19:59 DEBUG [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=2, active=0, idle=2, waiting=0)
+2025-08-04 10:19:59 DEBUG [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=2, active=0, idle=2, waiting=0)
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18975c88
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d95d1fe
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@36aefd43
+2025-08-04 10:19:59 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-08-04 10:19:59 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-04 10:20:00 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-08-04 10:20:00 WARN  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-08-04 10:20:00 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 10:20:00 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+2025-08-04 10:20:00 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 10:20:00 DEBUG [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=5, active=0, idle=5, waiting=0)
+2025-08-04 10:20:00 DEBUG [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@43778371: (connection evicted)
+2025-08-04 10:20:00 DEBUG [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@126f37f8: (connection evicted)
+2025-08-04 10:20:00 DEBUG [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@18975c88: (connection evicted)
+2025-08-04 10:20:00 DEBUG [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@5d95d1fe: (connection evicted)
+2025-08-04 10:20:00 DEBUG [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@36aefd43: (connection evicted)
+2025-08-04 10:20:00 DEBUG [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-08-04 10:20:00 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 10:20:00 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at org.example.LearningJavaApplication.main(LearningJavaApplication.java:18)
+Caused by: java.lang.RuntimeException: Could not postProcess org.springframework.security.config.annotation.web.builders.WebSecurity@6ab36cee of type class org.springframework.security.config.annotation.web.builders.WebSecurity
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:71)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.setFilterChainProxySecurityConfigurer(WebSecurityConfiguration.java:148)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:853)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospectorRequestTransformer': Cannot resolve reference to bean 'mvcHandlerMappingIntrospector' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1323)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.getIfUnique(DefaultListableBeanFactory.java:438)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.setApplicationContext(WebSecurity.java:397)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:110)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:85)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:412)
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.initializeBeanIfNeeded(AutowireBeanFactoryObjectPostProcessor.java:98)
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:67)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'healthEndpointWebMvcHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointWebExtensionConfiguration$MvcAdditionalHealthEndpointPathsConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.servlet.AdditionalHealthEndpointPathsWebMvcHandlerMapping]: Factory method 'healthEndpointWebMvcHandlerMapping' threw exception with message: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0: Error creating bean with name 'multiLevelCacheManager' defined in class path resource [org/example/multi_level_cache/MultiLevelConfig.class]: Unsatisfied dependency expressed through method 'multiLevelCacheManager' parameter 1: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("redisCacheManager")}
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 46 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointWebMvcHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointWebExtensionConfiguration$MvcAdditionalHealthEndpointPathsConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.servlet.AdditionalHealthEndpointPathsWebMvcHandlerMapping]: Factory method 'healthEndpointWebMvcHandlerMapping' threw exception with message: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0: Error creating bean with name 'multiLevelCacheManager' defined in class path resource [org/example/multi_level_cache/MultiLevelConfig.class]: Unsatisfied dependency expressed through method 'multiLevelCacheManager' parameter 1: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("redisCacheManager")}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:665)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1388)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:130)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 53 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.servlet.AdditionalHealthEndpointPathsWebMvcHandlerMapping]: Factory method 'healthEndpointWebMvcHandlerMapping' threw exception with message: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0: Error creating bean with name 'multiLevelCacheManager' defined in class path resource [org/example/multi_level_cache/MultiLevelConfig.class]: Unsatisfied dependency expressed through method 'multiLevelCacheManager' parameter 1: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("redisCacheManager")}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 69 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0: Error creating bean with name 'multiLevelCacheManager' defined in class path resource [org/example/multi_level_cache/MultiLevelConfig.class]: Unsatisfied dependency expressed through method 'multiLevelCacheManager' parameter 1: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("redisCacheManager")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.lambda$createEndpointBean$1(EndpointDiscoverer.java:145)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer$EndpointBean.getBean(EndpointDiscoverer.java:455)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.getFilterEndpoint(EndpointDiscoverer.java:313)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.isFilterMatch(EndpointDiscoverer.java:289)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.isExtensionExposed(EndpointDiscoverer.java:243)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.addExtensionBean(EndpointDiscoverer.java:170)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.addExtensionBeans(EndpointDiscoverer.java:159)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.discoverEndpoints(EndpointDiscoverer.java:124)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.getEndpoints(EndpointDiscoverer.java:117)
+	at org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration.getHealthEndpoint(HealthEndpointWebExtensionConfiguration.java:80)
+	at org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration$MvcAdditionalHealthEndpointPathsConfiguration.healthEndpointWebMvcHandlerMapping(HealthEndpointWebExtensionConfiguration.java:95)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multiLevelCacheManager' defined in class path resource [org/example/multi_level_cache/MultiLevelConfig.class]: Unsatisfied dependency expressed through method 'multiLevelCacheManager' parameter 1: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("redisCacheManager")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1689)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeanMap(DefaultListableBeanFactory.java:1575)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1392)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 94 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("redisCacheManager")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 112 common frames omitted
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+  context: ROOT
+  delegate: true
+----------> Parent Classloader:
+jdk.internal.loader.ClassLoaders$AppClassLoader@2c854dc5
+
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - idleTimeout.....................30000
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/Learning
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - username........................"postgres"
+2025-08-04 10:21:18 DEBUG [main] com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-08-04 10:21:18 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 10:21:18 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56499781
+2025-08-04 10:21:18 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3687caa3
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=2, active=0, idle=2, waiting=0)
+2025-08-04 10:21:19 DEBUG [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=2, active=0, idle=2, waiting=0)
+2025-08-04 10:21:19 DEBUG [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=2, active=0, idle=2, waiting=0)
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3c7fa1d3
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@797d2838
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71272766
+2025-08-04 10:21:19 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-04 10:21:19 DEBUG [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-08-04 10:21:19 DEBUG [main] o.e.config.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-08-04 10:21:19 WARN  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-08-04 10:21:19 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
