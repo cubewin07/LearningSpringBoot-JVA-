@@ -65,7 +65,6 @@ public class MultiLevelCache implements Cache {
 
     @Override
     public void put(Object key, Object value) {
-        System.out.println("Run" + name + " " + key + " " + value);
         local.put(key, value);
         remote.put(key, value);
     }
