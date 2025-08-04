@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/myapp.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/myapp.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/multi_level_cache/MultiLevelCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/multi_level_cache/MultiLevelCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/multi_level_cache/MultiLevelCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/multi_level_cache/MultiLevelCacheManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,9 @@
     "Application.LearningJavaApplication.executor": "Run",
     "Gradle./Users/letanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Other computers/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/build.gradle.executor": "Run",
     "Gradle.Build untitled.executor": "Run",
+    "Gradle.UserIntegrationTest.enrollCourse.executor": "Run",
     "Gradle.UserIntegrationTest.executor": "Run",
+    "Gradle.UserIntegrationTest.getUser.executor": "Run",
     "Gradle.untitled [:org.example.LearningJavaApplication.main()].executor": "Run",
     "JUnit.AuthenServiceTest.executor": "Run",
     "JUnit.AuthenServiceTest.testRegisterUserReturnsToken.executor": "Run",
@@ -151,41 +152,53 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="/Users/letanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Other computers/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/build.gradle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserIntegrationTest.enrollCourse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/build.gradle" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
-          <list />
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.UserIntegrationTest.enrollCourse&quot;" />
+          </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AuthenServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.user_service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.authen" />
-      <option name="MAIN_CLASS_NAME" value="org.example.authen.AuthenServiceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="UserIntegrationTest.getUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.UserIntegrationTest.getUser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="UserIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled.test" />
@@ -206,17 +219,17 @@
     <list>
       <item itemvalue="Application.LearningJavaApplication" />
       <item itemvalue="Gradle.UserIntegrationTest" />
-      <item itemvalue="Gradle./Users/letanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Other computers/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/build.gradle" />
-      <item itemvalue="JUnit.AuthenServiceTest" />
+      <item itemvalue="Gradle.UserIntegrationTest.enrollCourse" />
+      <item itemvalue="Gradle.UserIntegrationTest.getUser" />
       <item itemvalue="JUnit.UserIntegrationTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserIntegrationTest" />
+        <item itemvalue="Gradle.UserIntegrationTest.getUser" />
+        <item itemvalue="Gradle.UserIntegrationTest.enrollCourse" />
         <item itemvalue="JUnit.UserIntegrationTest" />
         <item itemvalue="Application.LearningJavaApplication" />
-        <item itemvalue="Gradle./Users/letanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Other computers/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/build.gradle" />
-        <item itemvalue="JUnit.AuthenServiceTest" />
       </list>
     </recent_temporary>
   </component>
