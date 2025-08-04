@@ -21,6 +21,6 @@ public class RedisCacheConfig {
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(kryoSerializer))
                 .entryTtl(Duration.ofMinutes(10));
 
-        return RedisCacheManager.builder(factory).cacheDefaults(config).build();
+        return RedisCacheManager.builder(factory).cacheDefaults(config).enableCreateOnMissingCache().build();
     }
 }
