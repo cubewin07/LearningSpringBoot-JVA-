@@ -1,5 +1,6 @@
 package org.example.multi_level_cache;
 
+import jakarta.annotation.Nonnull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.Cache;
@@ -44,13 +45,13 @@ public class MultiLevelCache implements Cache {
     }
 
     @Override
-    public <T> T get(Object key, Class<T> type) {
+    public <T> T get(@Nonnull Object key, Class<T> type) {
         ValueWrapper value = get(key); // delegate to custom logic
         return (value != null ? (T) value.get() : null);
     }
 
     @Override
-    public <T> T get(Object key, Callable<T> valueLoader) {
+    public <T> T get(@Nonnull Object key, @Nonnull Callable<T> valueLoader) {
         ValueWrapper value = get(key); // call our custom multi-level get
         if (value != null) return (T) value.get();
 
@@ -64,13 +65,13 @@ public class MultiLevelCache implements Cache {
     }
 
     @Override
-    public void put(Object key, Object value) {
+    public void put(@Nonnull Object key, Object value) {
         local.put(key, value);
         remote.put(key, value);
     }
 
     @Override
-    public void evict(Object key) {
+    public void evict(@Nonnull Object key) {
         local.evict(key);
         remote.evict(key);
     }
