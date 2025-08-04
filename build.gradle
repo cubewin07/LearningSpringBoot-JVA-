@@ -77,6 +77,13 @@ dependencies {
     //Redis
     implementation 'org.springframework.boot:spring-boot-starter-cache'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    // Caffeine
+    implementation("com.github.ben-manes.caffeine:caffeine")
+
+    // kryo
+    implementation("com.esotericsoftware:kryo:5.5.0")
+    implementation("org.springframework:spring-context-support")
 }
 
 flyway {
