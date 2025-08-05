@@ -29,8 +29,9 @@ spring:
     host: localhost
     port: 6379
     password:
+
   profiles:
-    defaults: dev
+    default: dev
 
 management:
   endpoints:
