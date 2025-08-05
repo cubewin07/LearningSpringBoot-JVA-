@@ -1,7 +1,20 @@
 <included>
     <appender name="JSON_FILE" class="ch.qos.logback.core.FileAppender">
         <file>logs/app-logs.json</file>
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <providers>
+                <timestamp>
+                    <pattern>yyyy-MM-dd HH:mm:ss.SSS</pattern>
+                    <timeZone>Asia/Ho_Chi_Minh</timeZone>
+                    <fieldName>timestamp</fieldName>
+                </timestamp>
+                <loggerName/>
+                <threadName/>
+                <logLevel/>
+                <message/>
+                <mdc/>
+            </providers>
+        </encoder>
     </appender>
 
     <root level="INFO">
