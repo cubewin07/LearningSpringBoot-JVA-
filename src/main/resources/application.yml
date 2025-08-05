@@ -30,20 +30,6 @@ spring:
     port: 6379
     password:
 
-logging:
-  level:
-    root: WARN
-    org.example.config: DEBUG
-    org.springframework.boot.context.config: DEBUG
-    com.zaxxer.hikari: DEBUG
-    org.springframework.jdbc.datasource: DEBUG
-    org.hibernate.engine.jdbc.connections: DEBUG
-  file:
-    name: logs/myapp.log
-  pattern:
-    console: "%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
-
 management:
   endpoints:
     web:
