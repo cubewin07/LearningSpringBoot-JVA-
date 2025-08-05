@@ -50,25 +50,30 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
             return;
         }
 
-        jwt = authenHeader.substring(7);
-        username = jwtService.extractUsername(jwt);
+        try {
+            jwt = authenHeader.substring(7);
+            username = jwtService.extractUsername(jwt);
 
-        if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-            if(jwtService.isValidToken(jwt, userDetails)) {
-                UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-                var user = (User) userDetails;
-                MDC.put("user", user.getId().toString());
-                log.info("Authenticated user: {}", username);
-            } else {
-                log.warn("Invalid JWT token for user: {}", username);
+            if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                if(jwtService.isValidToken(jwt, userDetails)) {
+                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                    SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                    var user = (User) userDetails;
+                    MDC.put("user", user.getId().toString());
+                    log.info("Authenticated user: {}", username);
+                } else {
+                    log.warn("Invalid JWT token for user: {}", username);
+                }
             }
+            Long duration = System.currentTimeMillis() - timestamp;
+            filterChain.doFilter(request, response);
+        } finally {
+            MDC.clear();
+            long duration = System.currentTimeMillis() - timestamp;
+            log.info("[Response] method={} path={} status={} duration={}ms",
+                    method, path, response.getStatus(), duration);
         }
-        Long duration = System.currentTimeMillis() - timestamp;
-        filterChain.doFilter(request, response);
-        log.info("[Response] method={} path={} status={} duration={}ms",
-                method, path, response.getStatus(), response);
     }
 
     @Override
