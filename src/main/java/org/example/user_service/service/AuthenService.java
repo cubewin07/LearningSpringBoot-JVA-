@@ -77,13 +77,17 @@ public class AuthenService {
         User user = userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
         List<CourseDTO> courseDTOs = user.getCourses().stream().map(course -> CourseDTO.builder().id(course.getId()).name(course.getName()).duration(course.getDuration() + " minutes").build()).toList();
-        return UserDTO.builder()
+        UserDTO dto = UserDTO.builder()
                 .id(user.getId())
                 .name(user.getName())
                 .email(user.getEmail())
                 .courses(courseDTOs)
                 .role(user.getRole())
                 .build();
+
+        System.out.println(dto.getClass().getName());
+
+        return dto;
     }
 
     @Transactional
@@ -103,11 +107,19 @@ public class AuthenService {
 
     @Transactional
     public CourseResponse enrollCourse(CourseEnrollRequest data) {
-        User user = (User)userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
+        User user = userRepository.findByEmail(data.email()).orElseThrow(() -> new UsernameNotFound("User not found"));
+        List<CourseDTO> courseDTOs = user.getCourses().stream().map(course -> CourseDTO.builder().id(course.getId()).name(course.getName()).duration(course.getDuration() + " minutes").build()).toList();
+        UserDTO userDTO = UserDTO.builder()
+                .id(user.getId())
+                .name(user.getName())
+                .email(user.getEmail())
+                .courses(courseDTOs)
+                .role(user.getRole())
+                .build();
         Course courses = courseRepository.findById(data.courseId()).orElseThrow(() -> new UsernameNotFound("Course not found"));
         user.getCourses().add(courses);
         Cache cache = Objects.requireNonNull(cacheManager.getCache("user"));
-        cache.put(data.email(), user);
+        cache.put(data.email(), userDTO);
         return CourseResponse.builder()
                 .courseId(courses.getId())
                 .name(courses.getName())
