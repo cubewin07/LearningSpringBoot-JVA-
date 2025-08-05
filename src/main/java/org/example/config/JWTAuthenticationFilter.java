@@ -60,7 +60,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
                     UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                     var user = (User) userDetails;
-                    MDC.put("user", user.getId().toString());
+                    MDC.put("userId", user.getId().toString());
                     log.info("Authenticated user: {}", username);
                 } else {
                     log.warn("Invalid JWT token for user: {}", username);
