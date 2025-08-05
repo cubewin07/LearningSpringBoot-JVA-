@@ -15,6 +15,6 @@
     <logger name="org.hibernate.engine.jdbc.connections" level="DEBUG" />
 
     <root level="INFO">
-        <appender-ref ref="JSON_FILE" />
+        <appender-ref ref="Console" />
     </root>
 </included>

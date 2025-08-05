@@ -3,4 +3,8 @@
         <file>logs/app-logs.json</file>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
+
+    <root level="INFO">
+        <appender-ref ref="JSON_FILE" />
+    </root>
 </included>
