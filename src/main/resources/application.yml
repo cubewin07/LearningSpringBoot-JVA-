@@ -37,7 +37,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health, info, metrics, prometheus
         exclude: env,beans
     shutdown:
       enabled: true

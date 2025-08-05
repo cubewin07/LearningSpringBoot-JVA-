@@ -87,6 +87,10 @@ dependencies {
     // kryo
     implementation("com.esotericsoftware:kryo:5.5.0")
     implementation("org.springframework:spring-context-support")
+
+    //  Prometheus
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+
 }
 
 flyway {
