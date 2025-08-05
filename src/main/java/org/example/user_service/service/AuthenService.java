@@ -77,17 +77,14 @@ public class AuthenService {
         User user = userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFound("User not found"));
         List<CourseDTO> courseDTOs = user.getCourses().stream().map(course -> CourseDTO.builder().id(course.getId()).name(course.getName()).duration(course.getDuration() + " minutes").build()).toList();
-        UserDTO dto = UserDTO.builder()
+
+        return UserDTO.builder()
                 .id(user.getId())
                 .name(user.getName())
                 .email(user.getEmail())
                 .courses(courseDTOs)
                 .role(user.getRole())
                 .build();
-
-        System.out.println(dto.getClass().getName());
-
-        return dto;
     }
 
     @Transactional
