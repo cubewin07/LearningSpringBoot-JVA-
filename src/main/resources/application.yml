@@ -39,5 +39,8 @@ management:
       exposure:
         include: health, info, metrics, prometheus
         exclude: env,beans
+    metrics:
+      tags:
+        application: "my-app"
     shutdown:
       enabled: true
