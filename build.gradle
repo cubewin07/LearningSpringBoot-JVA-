@@ -91,6 +91,10 @@ dependencies {
     //  Prometheus
     implementation 'io.micrometer:micrometer-registry-prometheus'
 
+    // Hibernate metrics
+    implementation 'io.micrometer:micrometer-tracing' // optional for tracing
+    implementation 'io.micrometer:micrometer-hibernate'
+
 }
 
 flyway {
