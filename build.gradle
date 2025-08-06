@@ -93,7 +93,6 @@ dependencies {
 
     // Hibernate metrics
     implementation 'io.micrometer:micrometer-tracing' // optional for tracing
-    implementation 'io.micrometer:micrometer-hibernate'
 
 }
 
