@@ -15,8 +15,17 @@ public class RateLimiterService {
     }
 
     public Bucket newBucket(String key) {
+        int capacity;
+
+        if (key.equals("admin")) {
+            capacity = 30;
+        } else {
+            capacity = 10;
+        }
+
+
         return Bucket.builder()
-                .addLimit(limit -> limit.capacity(10).refillIntervally(10, Duration.ofMinutes(1)))
+                .addLimit(limit -> limit.capacity(capacity).refillIntervally(10, Duration.ofMinutes(1)))
                 .build();
     }
 
