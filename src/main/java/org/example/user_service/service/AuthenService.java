@@ -14,6 +14,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -51,15 +52,15 @@ public class AuthenService {
     }
 
     public AuthenticationResponse authenticateUser( AuthenticationRequest request) {
-        authenticationManager.authenticate(
+        Authentication auth = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.email(),
                         request.password()
                 )
         );
-        var user = userRepository.findByEmail(request.email())
-                .orElseThrow(() -> new UsernameNotFound("User not found"));
-        String jwtToken = jwtService.generateToken(user);
+        var userDetails = (UserDetails)auth.getPrincipal();
+
+        String jwtToken = jwtService.generateToken(userDetails);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();
