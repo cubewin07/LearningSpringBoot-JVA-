@@ -48,6 +48,10 @@ public class AuthenController {
 
     @GetMapping("/users")
     public ResponseEntity<List<UserDetails>> getAllUser() {
+        Bucket bucket = rateLimiterService.resolveBucket("admin");
+        if(!bucket.tryConsume(1)) {
+            throw new TooManyRequest("You many request sent, please try again after a minute");
+        }
         return ResponseEntity.ok(authenService.getAllUser());
     }
 
