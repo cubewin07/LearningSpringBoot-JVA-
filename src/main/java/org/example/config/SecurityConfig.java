@@ -41,7 +41,7 @@ public class SecurityConfig {
                                 ).permitAll()
                                 .requestMatchers("/actuator/**").permitAll()
                                 .requestMatchers("/api/v1/course", "/api/v1/enrollCourse").permitAll()
-                                .requestMatchers("/api/v1/users").hasRole("ADMIN")
+                                .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
