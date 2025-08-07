@@ -46,7 +46,7 @@ public class AuthenController {
         return ResponseEntity.ok(authenService.authenticateUser(request));
     }
 
-    @GetMapping("/users")
+    @GetMapping("/admin/users")
     public ResponseEntity<List<UserDetails>> getAllUser() {
         Bucket bucket = rateLimiterService.resolveBucket("admin");
         if(!bucket.tryConsume(1)) {
