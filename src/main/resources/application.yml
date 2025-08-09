@@ -51,3 +51,7 @@ management:
       all: true
   shutdown:
     enabled: true
+
+cloudflare:
+  r2:
+    bucketName: cdn-assets
