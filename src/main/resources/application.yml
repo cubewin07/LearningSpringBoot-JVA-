@@ -32,6 +32,8 @@ spring:
 
   profiles:
     default: dev
+  config:
+    import: optional:file:.env.local[properties]
 
 management:
   endpoints:
