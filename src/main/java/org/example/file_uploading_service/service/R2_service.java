@@ -7,6 +7,8 @@ import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 @Service
@@ -26,11 +28,13 @@ public class R2_service {
         s3.putObject(request, RequestBody.fromBytes(data));
     }
 
-    public void uploadLargeFile(String key, Path path) {
+    public void uploadLargeFile(String key, Path path) throws IOException {
+
 
         PutObjectRequest request = PutObjectRequest.builder()
                 .bucket(bucketName)
                 .key(key)
+                .contentType(Files.probeContentType(path))
                 .build();
         s3.putObject(request, RequestBody.fromFile(path));
     }
