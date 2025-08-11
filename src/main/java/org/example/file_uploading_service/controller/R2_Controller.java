@@ -35,8 +35,10 @@ public class R2_Controller {
            return ResponseEntity.ok("File uploaded successfully");
        }
 
+       byte[] data = file.getBytes();
+       r2_service.uploadFile(key, data, file.getContentType());
 
-        return null;
+        return ResponseEntity.ok(key);
     }
 
 }
