@@ -1,6 +1,5 @@
 package org.example.file_uploading_service.controller;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.example.file_uploading_service.service.R2_service;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +36,7 @@ public class R2_Controller {
        }
 
 
+        return null;
     }
 
 }
