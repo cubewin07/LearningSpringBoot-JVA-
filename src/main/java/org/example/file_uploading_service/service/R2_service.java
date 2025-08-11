@@ -1,4 +1,4 @@
-package org.example.object_storage;
+package org.example.file_uploading_service.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
