@@ -1,15 +1,13 @@
 package org.example.websocket;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.socket.CloseStatus;
-import org.springframework.web.socket.WebSocketHandler;
-import org.springframework.web.socket.WebSocketMessage;
-import org.springframework.web.socket.WebSocketSession;
+import org.springframework.web.socket.*;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class WebsocketHandler implements WebSocketHandler {
+public class WebsocketHandler extends TextWebSocketHandler {
     public Map<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
 
     @Override
@@ -19,12 +17,7 @@ public class WebsocketHandler implements WebSocketHandler {
     }
 
     @Override
-    public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
-
-    }
-
-    @Override
-    public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
+    public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 
     }
 
@@ -35,10 +28,5 @@ public class WebsocketHandler implements WebSocketHandler {
             sessions.remove(userId);
 
         //        can use closeStatus for logging
-    }
-
-    @Override
-    public boolean supportsPartialMessages() {
-        return false;
     }
 }
