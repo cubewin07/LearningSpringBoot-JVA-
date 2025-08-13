@@ -16,7 +16,7 @@ import java.nio.file.Path;
 public class R2_service {
     private final S3Client s3;
     @Value("${cloudflare.r2.bucketName}")
-    private final String bucketName;
+    private String bucketName;
 
     public void uploadFile(String key, byte[] data, String contentType){
 
