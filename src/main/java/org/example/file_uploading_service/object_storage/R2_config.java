@@ -1,4 +1,4 @@
-package org.example.object_storage;
+package org.example.file_uploading_service.object_storage;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
