@@ -19,7 +19,7 @@ public class WebsocketHandler extends TextWebSocketHandler {
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        String userId = (String)session.getAttributes().get("userId");
+        String userId = String.valueOf(session.getAttributes().get("userId"));
         sessions.put(userId, session);
     }
 
