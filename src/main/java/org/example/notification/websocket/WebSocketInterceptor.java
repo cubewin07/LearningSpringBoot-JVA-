@@ -1,9 +1,11 @@
 package org.example.notification.websocket;
 
 import lombok.RequiredArgsConstructor;
+import org.apache.http.protocol.HTTP;
 import org.example.Exception.UsernameNotFound;
 import org.example.user_service.model.User;
 import org.example.user_service.repository.UserRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.security.core.Authentication;
@@ -25,6 +27,7 @@ public class WebSocketInterceptor implements HandshakeInterceptor {
             attributes.put("userId", user.getId());
             return true;
         }
+        response.setStatusCode(HttpStatus.FORBIDDEN);
         return false;
     }
 
