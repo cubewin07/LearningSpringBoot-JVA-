@@ -23,6 +23,7 @@ public class WebSocketInterceptor implements HandshakeInterceptor {
             String username = param.substring(param.indexOf("username=") + 9);
             User user = userRepository.findByEmail(username).orElseThrow(() -> new UsernameNotFound("User not found"));
             attributes.put("userId", user.getId());
+            return true;
         }
         return false;
     }
