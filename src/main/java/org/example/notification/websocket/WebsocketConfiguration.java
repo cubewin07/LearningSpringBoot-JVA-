@@ -1,5 +1,6 @@
 package org.example.notification.websocket;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.example.user_service.repository.UserRepository;
 import org.springframework.context.annotation.Configuration;
