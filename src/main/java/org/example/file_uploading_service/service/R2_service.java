@@ -8,6 +8,7 @@ import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -37,5 +38,15 @@ public class R2_service {
                 .contentType(Files.probeContentType(path))
                 .build();
         s3.putObject(request, RequestBody.fromFile(path));
+    }
+
+    public void upLoadStream(String key, InputStream inputStream, Long contentSize, String contentType) throws IOException {
+
+        PutObjectRequest request = PutObjectRequest.builder()
+                .bucket(bucketName)
+                .key(key)
+                .contentType(contentType)
+                .build();
+        s3.putObject(request, RequestBody.fromInputStream(inputStream, contentSize));
     }
 }
