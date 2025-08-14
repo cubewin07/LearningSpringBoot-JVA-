@@ -3,6 +3,7 @@ package org.example.notification.websocket;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.example.notification.ChatDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;
@@ -13,6 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class WebsocketHandler extends TextWebSocketHandler {
     public Map<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
     private final ObjectMapper objectMapper;
@@ -20,12 +22,14 @@ public class WebsocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         String userId = String.valueOf(session.getAttributes().get("userId"));
+        log.info("User with id: {} connected", userId);
         sessions.put(userId, session);
     }
 
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
         ChatDTO chat = objectMapper.readValue(message.getPayload(), ChatDTO.class);
+        log.info("Received message: {}", chat);
         if(sessions.get(chat.to()) != null) {
             sessions.get(chat.to()).sendMessage(new TextMessage(objectMapper.writeValueAsString(chat)));
         }
