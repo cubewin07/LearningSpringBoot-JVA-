@@ -1,4 +1,4 @@
-package org.example.firebase_cloud_messaging;
+package org.example.notification.firebase_cloud_messaging;
 
 
 import com.google.auth.oauth2.GoogleCredentials;

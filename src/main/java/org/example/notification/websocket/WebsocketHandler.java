@@ -1,4 +1,4 @@
-package org.example.websocket;
+package org.example.notification.websocket;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
