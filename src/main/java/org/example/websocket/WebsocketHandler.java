@@ -1,12 +1,14 @@
 package org.example.websocket;
 
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Component
 public class WebsocketHandler extends TextWebSocketHandler {
     public Map<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
 
