@@ -1,5 +1,7 @@
 package org.example.websocket;
 
+import lombok.AllArgsConstructor;
+import org.example.user_service.repository.UserRepository;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
@@ -8,13 +10,15 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 
 @Configuration
 @EnableWebSocket
+@AllArgsConstructor
 public class WebsocketConfiguration implements WebSocketConfigurer {
+    private UserRepository userRepository;
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry
                 .addHandler(new WebsocketHandler(), "/ws")
-                .addInterceptors(new WebSocketInterceptor())
+                .addInterceptors(new WebSocketInterceptor(userRepository))
                 .setAllowedOrigins("*");
     }
 }
