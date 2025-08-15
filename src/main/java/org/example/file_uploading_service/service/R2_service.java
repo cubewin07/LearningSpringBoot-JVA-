@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
@@ -53,5 +54,13 @@ public class R2_service {
                 .contentType(contentType)
                 .build();
         s3.putObject(request, RequestBody.fromInputStream(inputStream, contentSize));
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> options = ObjectUtils.asMap(
+                "public-id", key,
+                "overwrite", true
+        );
+        cloudinary.uploader().upload(inputStream, options);
     }
+
 }
