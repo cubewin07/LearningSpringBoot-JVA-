@@ -1,7 +1,9 @@
 package org.example.file_uploading_service.service;
 
 import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import lombok.RequiredArgsConstructor;
+import org.checkerframework.checker.units.qual.C;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.core.sync.RequestBody;
@@ -28,6 +30,12 @@ public class R2_service {
 
     @Value("${CLOUDINARY_API_SECRET")
     private String apiSecret;
+
+    Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
+            "cloud_name", cloudName,
+            "api_key", apiKey,
+            "api_secret", apiSecret
+    ));
 
     public void uploadFile(String key, byte[] data, String contentType){
 
