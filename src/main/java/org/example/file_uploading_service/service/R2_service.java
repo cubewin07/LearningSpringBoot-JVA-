@@ -19,13 +19,10 @@ import java.nio.file.Path;
 @RequiredArgsConstructor
 public class R2_service {
     private final S3Client s3;
+    private final Cloudinary cloudinary;
+
     @Value("${cloudflare.r2.bucketName}")
     private String bucketName;
-
-    @Value("${CLOUDINARY_URL}")
-    private String cloudinaryUrl;
-
-    Cloudinary cloudinary = new Cloudinary(cloudinaryUrl);
 
     public void uploadFile(String key, byte[] data, String contentType){
 
