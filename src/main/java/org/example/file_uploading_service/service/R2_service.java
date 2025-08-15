@@ -22,20 +22,10 @@ public class R2_service {
     @Value("${cloudflare.r2.bucketName}")
     private String bucketName;
 
-    @Value("${CLOUDINARY_CLOUD_NAME")
-    private String cloudName;
+    @Value("${CLOUDINARY_URL}")
+    private String cloudinaryUrl;
 
-    @Value("${CLOUDINARY_API_KEY")
-    private String apiKey;
-
-    @Value("${CLOUDINARY_API_SECRET")
-    private String apiSecret;
-
-    Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
-            "cloud_name", cloudName,
-            "api_key", apiKey,
-            "api_secret", apiSecret
-    ));
+    Cloudinary cloudinary = new Cloudinary(cloudinaryUrl);
 
     public void uploadFile(String key, byte[] data, String contentType){
 
