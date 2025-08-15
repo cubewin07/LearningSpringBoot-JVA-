@@ -67,4 +67,23 @@ public class R2_service {
         return result.get("secure_url").toString();
     }
 
+    public String upLoadUserAvatar(String key, InputStream inputStream, Long contentSize, String contentType) throws IOException {
+        PutObjectRequest request = PutObjectRequest.builder()
+                .bucket(bucketName)
+                .key(key)
+                .contentType(contentType)
+                .build();
+        s3.putObject(request, RequestBody.fromInputStream(inputStream, contentSize));
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> options = ObjectUtils.asMap(
+                "public_id", key,
+                "overwrite", true
+        );
+        @SuppressWarnings("unchecked")
+        Map<String, Object> result = cloudinary.uploader().upload(inputStream, options);
+
+        return result.get("secure_url").toString();
+    }
+
 }
