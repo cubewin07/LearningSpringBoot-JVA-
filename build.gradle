@@ -103,7 +103,7 @@ dependencies {
     implementation 'io.github.cdimascio:dotenv-java:3.0.0'
 
     // Cloudinary
-    implementation "com.cloudinary:cloudinary-http45:2.3.0"
+    implementation "com.cloudinary:cloudinary-http44:1.39.0"
 }
 
 flyway {

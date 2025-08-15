@@ -1,5 +1,6 @@
 package org.example.file_uploading_service.service;
 
+import com.cloudinary.Cloudinary;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
