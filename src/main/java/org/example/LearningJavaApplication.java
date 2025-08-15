@@ -24,6 +24,9 @@ public class LearningJavaApplication {
         System.setProperty("CLOUDFLARE_R2_ACCESS_KEY_ID", dotenv.get("CLOUDFLARE_R2_ACCESS_KEY_ID"));
         System.setProperty("CLOUDFLARE_R2_SECRET_ACCESS_KEY", dotenv.get("CLOUDFLARE_R2_SECRET_ACCESS_KEY"));
         System.setProperty("CLOUDFLARE_R2_ENDPOINT_URL", dotenv.get("CLOUDFLARE_R2_ENDPOINT_URL"));
+        System.setProperty("CLOUDINARY_CLOUD_NAME", dotenv.get("CLOUDINARY_CLOUD_NAME"));
+        System.setProperty("CLOUDINARY_API_KEY", dotenv.get("CLOUDINARY_API_KEY"));
+        System.setProperty("CLOUDINARY_API_SECRET", dotenv.get("CLOUDINARY_API_SECRET"));
         SpringApplication.run(LearningJavaApplication.class, args);
     }
 }
