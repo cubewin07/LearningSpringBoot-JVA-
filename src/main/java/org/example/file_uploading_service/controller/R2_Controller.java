@@ -5,6 +5,7 @@ import org.example.file_uploading_service.service.R2_service;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ import java.nio.file.Path;
 public class R2_Controller {
     private final R2_service r2_service;
 
-    @RequestMapping("/upload")
+    @PostMapping("/upload")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
        if(file.isEmpty()){
            return ResponseEntity.badRequest().body("File is empty");
@@ -40,5 +41,7 @@ public class R2_Controller {
 
         return ResponseEntity.ok(key);
     }
+
+    @Re
 
 }
