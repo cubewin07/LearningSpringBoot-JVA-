@@ -20,6 +20,15 @@ public class R2_service {
     @Value("${cloudflare.r2.bucketName}")
     private String bucketName;
 
+    @Value("${CLOUDINARY_CLOUD_NAME")
+    private String cloudName;
+
+    @Value("${CLOUDINARY_API_KEY")
+    private String apiKey;
+
+    @Value("${CLOUDINARY_API_SECRET")
+    private String apiSecret;
+
     public void uploadFile(String key, byte[] data, String contentType){
 
         PutObjectRequest request = PutObjectRequest.builder()
