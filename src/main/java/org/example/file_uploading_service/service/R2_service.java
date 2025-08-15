@@ -46,7 +46,7 @@ public class R2_service {
         s3.putObject(request, RequestBody.fromFile(path));
     }
 
-    public void upLoadStream(String key, InputStream inputStream, Long contentSize, String contentType) throws IOException {
+    public String upLoadStream(String key, InputStream inputStream, Long contentSize, String contentType) throws IOException {
 
         PutObjectRequest request = PutObjectRequest.builder()
                 .bucket(bucketName)
@@ -60,7 +60,11 @@ public class R2_service {
                 "public-id", key,
                 "overwrite", true
         );
-        cloudinary.uploader().upload(inputStream, options);
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> result = cloudinary.uploader().upload(inputStream, options);
+
+        return result.get("secure_url").toString();
     }
 
 }
