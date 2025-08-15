@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -42,6 +43,19 @@ public class R2_Controller {
         return ResponseEntity.ok(key);
     }
 
-    @Re
+    @PostMapping("/upload/avatar")
+    public ResponseEntity<String> uploadUserAvatar(@RequestParam("file") MultipartFile file) throws IOException {
+        if(file.isEmpty()){
+            return ResponseEntity.badRequest().body("File is empty");
+        }
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getPrincipal().getClass().getName();
+        String key = username+"/"+file.getOriginalFilename();
+        InputStream inputStream = file.getInputStream();
+        Long contentSize = file.getSize();
+        String contentType = file.getContentType();
+        String url = r2_service.upLoadUserAvatar(key, inputStream, contentSize, contentType);
+        return ResponseEntity.ok(url);
+    }
 
 }
