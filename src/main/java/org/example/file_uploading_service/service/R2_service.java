@@ -2,8 +2,11 @@ package org.example.file_uploading_service.service;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.checkerframework.checker.units.qual.C;
+import org.example.user_service.model.User;
+import org.example.user_service.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.core.sync.RequestBody;
@@ -21,6 +24,7 @@ import java.util.Map;
 public class R2_service {
     private final S3Client s3;
     private final Cloudinary cloudinary;
+    private final UserRepository userRepository;
 
     @Value("${cloudflare.r2.bucketName}")
     private String bucketName;
@@ -67,6 +71,7 @@ public class R2_service {
         return result.get("secure_url").toString();
     }
 
+    @Transactional
     public String upLoadUserAvatar(String key, InputStream inputStream, Long contentSize, String contentType) throws IOException {
         PutObjectRequest request = PutObjectRequest.builder()
                 .bucket(bucketName)
@@ -83,6 +88,9 @@ public class R2_service {
         );
         @SuppressWarnings("unchecked")
         Map<String, Object> result = cloudinary.uploader().upload(inputStream, options);
+
+        User user = userRepository.findByEmail(key.substring(0, key.indexOf("/"))).orElseThrow(() -> new RuntimeException("User not found"));
+        user.setAvatar(result.get("secure_url"));
 
         return result.get("secure_url").toString();
     }
