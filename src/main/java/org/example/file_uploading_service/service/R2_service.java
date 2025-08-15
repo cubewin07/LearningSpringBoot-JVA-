@@ -78,7 +78,8 @@ public class R2_service {
         @SuppressWarnings("unchecked")
         Map<String, Object> options = ObjectUtils.asMap(
                 "public_id", key,
-                "overwrite", true
+                "overwrite", true,
+                "folder", "user_avatar"
         );
         @SuppressWarnings("unchecked")
         Map<String, Object> result = cloudinary.uploader().upload(inputStream, options);
