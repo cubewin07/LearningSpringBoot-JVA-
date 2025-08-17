@@ -1,6 +1,7 @@
 package org.example.notification.websocket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +40,7 @@ public class WebsocketHandler extends TextWebSocketHandler {
     public void afterConnectionClosed(WebSocketSession session, CloseStatus closeStatus) throws Exception {
         String userId = (String)session.getAttributes().get("userId");
         if (userId != null)
+            log.info("User with id: {} logged out", userId);
             sessions.remove(userId);
 
         //        can use closeStatus for logging
