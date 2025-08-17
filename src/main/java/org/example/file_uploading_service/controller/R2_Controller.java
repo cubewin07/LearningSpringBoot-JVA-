@@ -1,7 +1,10 @@
 package org.example.file_uploading_service.controller;
 
+import io.github.bucket4j.Bucket;
 import lombok.RequiredArgsConstructor;
+import org.example.Exception.TooManyRequest;
 import org.example.file_uploading_service.service.R2_service;
+import org.example.rate_limiting.RateLimiterService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,14 +24,22 @@ import java.nio.file.Path;
 @RequiredArgsConstructor
 public class R2_Controller {
     private final R2_service r2_service;
+    private final RateLimiterService rateLimiterService;
 
     @PostMapping("/upload")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
        if(file.isEmpty()){
            return ResponseEntity.badRequest().body("File is empty");
        }
+
        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
        String username = auth.getPrincipal().getClass().getName();
+
+       Bucket bucket = rateLimiterService.resolveBucket(username);
+
+       if(!bucket.tryConsume(1))
+           throw new TooManyRequest("You many request sent, please try again after a minute");
+
        String key = username+"/"+file.getOriginalFilename();
        if(file.getSize()>1024*1024*5){
            Path temp = Files.createTempFile(null, null);
