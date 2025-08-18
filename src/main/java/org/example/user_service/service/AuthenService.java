@@ -12,6 +12,8 @@ import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -67,9 +69,8 @@ public class AuthenService {
     }
 
     @Cacheable(value ="admin", key="getAllUser" )
-    public List<UserDetails> getAllUser() {
-            List<User> users = userRepository.findAll();
-            return new ArrayList<UserDetails>(users);
+    public Page<User> getAllUser(Pageable pageable) {
+        return userRepository.findAll(pageable);
     }
 
     @Cacheable(value ="user", key="@jwtService.extractUsername(#token)" )
