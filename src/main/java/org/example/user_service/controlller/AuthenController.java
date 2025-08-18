@@ -14,6 +14,7 @@ import org.example.user_service.model.AuthenticationResponse;
 import org.example.user_service.model.RegisterRequest;
 import org.example.user_service.model.UserDTO;
 import org.example.user_service.service.AuthenService;
+import org.springframework.data.domain.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
@@ -47,12 +48,13 @@ public class AuthenController {
     }
 
     @GetMapping("/admin/users")
-    public ResponseEntity<List<UserDetails>> getAllUser() {
+    public ResponseEntity<List<UserDetails>> getAllUser(@RequestParam(name = "number", defaultValue = "10") int size, @RequestParam(name = "page", defaultValue = "0") int page) {
         Bucket bucket = rateLimiterService.resolveBucket("admin");
         if(!bucket.tryConsume(1)) {
             throw new TooManyRequest("You many request sent, please try again after a minute");
         }
-        return ResponseEntity.ok(authenService.getAllUser());
+        Pageable pageable = PageRequest.of(page, size);
+        return ResponseEntity.ok(authenService.getAllUser(pageable));
     }
 
     @GetMapping("/own")
