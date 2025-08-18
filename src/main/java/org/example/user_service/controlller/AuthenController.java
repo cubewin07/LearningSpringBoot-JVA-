@@ -53,7 +53,7 @@ public class AuthenController {
             throw new TooManyRequest("You many request sent, please try again after a minute");
         }
         Pageable pageable = PageRequest.of(page, size);
-        return ResponseEntity.ok(authenService.getAllUser(pageable));
+        return ResponseEntity.ok(authenService.getAllUser(search ,pageable));
     }
 
     @GetMapping("/own")
