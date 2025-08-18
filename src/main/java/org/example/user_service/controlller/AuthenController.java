@@ -9,10 +9,7 @@ import org.example.course.CourseEnrollRequest;
 import org.example.course.CourseRequest;
 import org.example.course.CourseResponse;
 import org.example.rate_limiting.RateLimiterService;
-import org.example.user_service.model.AuthenticationRequest;
-import org.example.user_service.model.AuthenticationResponse;
-import org.example.user_service.model.RegisterRequest;
-import org.example.user_service.model.UserDTO;
+import org.example.user_service.model.*;
 import org.example.user_service.service.AuthenService;
 import org.springframework.data.domain.*;
 import org.springframework.http.ResponseEntity;
@@ -48,7 +45,7 @@ public class AuthenController {
     }
 
     @GetMapping("/admin/users")
-    public ResponseEntity<List<UserDetails>> getAllUser(@RequestParam(name = "number", defaultValue = "10") int size, @RequestParam(name = "page", defaultValue = "0") int page) {
+    public ResponseEntity<Page<User>> getAllUser(@RequestParam(name = "number", defaultValue = "10") int size, @RequestParam(name = "page", defaultValue = "0") int page) {
         Bucket bucket = rateLimiterService.resolveBucket("admin");
         if(!bucket.tryConsume(1)) {
             throw new TooManyRequest("You many request sent, please try again after a minute");
