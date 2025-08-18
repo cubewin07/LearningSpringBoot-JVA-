@@ -12,6 +12,8 @@ import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -69,8 +71,20 @@ public class AuthenService {
     }
 
     @Cacheable(value ="admin", key="getAllUser" )
-    public Page<User> getAllUser(Pageable pageable) {
-        return userRepository.findAll(pageable);
+    public Page<User> getAllUser(String search ,Pageable pageable) {
+        if(search != null && !search.isBlank()) {
+            return userRepository.findAll(pageable);
+        }
+
+        User probe = new User();
+        probe.setEmail(search);;
+
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withIgnoreCase("email")
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
+        Example<User> example = Example.of(probe, matcher);
+
+        return userRepository.findAll(example, pageable);
     }
 
     @Cacheable(value ="user", key="@jwtService.extractUsername(#token)" )
