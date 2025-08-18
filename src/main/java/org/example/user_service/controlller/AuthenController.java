@@ -45,7 +45,9 @@ public class AuthenController {
     }
 
     @GetMapping("/admin/users")
-    public ResponseEntity<Page<User>> getAllUser(@RequestParam(name = "number", defaultValue = "10") int size, @RequestParam(name = "page", defaultValue = "0") int page) {
+    public ResponseEntity<Page<User>> getAllUser(@RequestParam(name = "search", required = false) String search,
+                                                 @RequestParam(name = "number", defaultValue = "10") int size,
+                                                 @RequestParam(name = "page", defaultValue = "0") int page) {
         Bucket bucket = rateLimiterService.resolveBucket("admin");
         if(!bucket.tryConsume(1)) {
             throw new TooManyRequest("You many request sent, please try again after a minute");
