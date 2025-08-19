@@ -43,19 +43,19 @@ spring:
       client:
         registration:
           google:
-            client-id:
-            client-secret:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
             scope:
               - openid
               - profile
               - email
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
           github:
-            client-id:
-            client-secret:
-              scope:
-                - user
-                - user:email
+            client-id: ${GITHUB_CLIENT_ID}
+            client-secret: ${GITHUB_CLIENT_SECRET}
+            scope:
+              - user
+              - user:email
 
 management:
   endpoints:
