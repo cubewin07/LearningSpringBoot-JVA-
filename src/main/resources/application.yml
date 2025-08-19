@@ -38,6 +38,24 @@ spring:
     multipart:
       max-file-size: 2GB
       max-request-size: 2GB
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id:
+            client-secret:
+            scope:
+              - openid
+              - profile
+              - email
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+          github:
+            client-id:
+            client-secret:
+              scope:
+                - user
+                - user:email
 
 management:
   endpoints:
