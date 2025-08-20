@@ -90,7 +90,7 @@ public class R2_service {
         Map<String, Object> result = cloudinary.uploader().upload(inputStream, options);
 
         User user = userRepository.findByEmail(key.substring(0, key.indexOf("/"))).orElseThrow(() -> new RuntimeException("User not found"));
-        user.setAvatar(result.get("secure_url"));
+//        user.setAvatar(result.get("secure_url"));
 
         return result.get("secure_url").toString();
     }
