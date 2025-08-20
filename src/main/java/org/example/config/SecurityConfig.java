@@ -25,7 +25,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final JWTAuthenticationFilter JWTAuthenticationFilter;
-    private final MyAuthSuccessHandler myAuthSuccessHanlder;
+    private final MyAuthSuccessHandler myAuthSuccessHandler;
 
     @Bean
     public SecurityFilterChain jwtAuthenticationFilter(HttpSecurity http, UserDetailsService userDetailsService) throws Exception {
@@ -48,7 +48,7 @@ public class SecurityConfig {
                 )
                 .oauth2Login(oauth2 ->
                         oauth2
-                                .successHandler(myAuthSuccessHanlder)
+                                .successHandler(myAuthSuccessHandler)
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider(userDetailsService))
