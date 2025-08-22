@@ -49,7 +49,7 @@ public class SecurityConfig {
                                 .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
-                .cors(Customizer.withDefaults())
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .formLogin(Customizer.withDefaults())
                 .oauth2Login(oauth2 ->
                         oauth2
