@@ -107,6 +107,9 @@ dependencies {
 
     // Cloudinary
     implementation "com.cloudinary:cloudinary-http44:1.39.0"
+
+    // Markdown
+    implementation 'org.commonmark:commonmark:0.21.0'
 }
 
 flyway {
