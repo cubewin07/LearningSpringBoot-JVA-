@@ -33,7 +33,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain jwtAuthenticationFilter(HttpSecurity http, UserDetailsService userDetailsService) throws Exception {
         http
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/ws/**"))
+                .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth ->
                         auth
                                 .requestMatchers(
