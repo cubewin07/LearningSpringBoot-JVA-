@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a6e4059-4bf8-49fd-ac13-fae2de3cd1a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/letanthang/learning software/backend-learning/LearningSpringBoot(JVA)/model_spring_full_setup&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/letanthang/learning_software/backend-learning/LearningSpringBoot(JVA)/model_spring_full_setup&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/tanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Máy tính khác/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -111,7 +106,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LearningJavaApplication">
+  <component name="RunManager" selected="Gradle.UserIntegrationTest">
     <configuration name="LearningJavaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -223,8 +218,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LearningJavaApplication" />
         <item itemvalue="Gradle.UserIntegrationTest" />
+        <item itemvalue="Application.LearningJavaApplication" />
         <item itemvalue="Gradle.UserIntegrationTest.getUser" />
         <item itemvalue="Gradle.UserIntegrationTest.enrollCourse" />
         <item itemvalue="JUnit.UserIntegrationTest" />
