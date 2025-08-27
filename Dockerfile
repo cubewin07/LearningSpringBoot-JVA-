@@ -13,6 +13,6 @@ FROM eclipse-temurin:21-jdk-jammy
 
 WORKDIR /app
 
-COPY --from=build /app/build/libs/*-SPAPSHOT.jar app.jar
+COPY --from=build /app/build/libs/*-SNAPSHOT.jar app.jar
 
 CMD ["java", "-jar", "app.jar"]
