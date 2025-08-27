@@ -8,3 +8,11 @@ COPY . .
 RUN chmod +x ./gradlew
 
 RUN ./gradlew clean build -x test
+
+FROM eclipse-temurin:21-jdk-jammy
+
+WORKDIR /app
+
+COPY --from=build /app/build/libs/*-SPAPSHOT.jar app.jar
+
+CMD ["java", "-jar", "app.jar"]
