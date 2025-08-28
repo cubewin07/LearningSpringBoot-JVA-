@@ -1,21 +1,4 @@
 services:
-  postgres:
-    image: postgres:15
-    ports:
-      - 5433:5432
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 071208
-      POSTGRES_DB: Learning
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d Learning"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-      start_period: 10s
-
   redis:
     image: redis:7-alpine
     ports:
@@ -35,24 +18,17 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      postgres:
-        condition: service_healthy
       redis:
         condition: service_healthy
     environment:
       SPRING_PROFILES_ACTIVE: docker
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Learning
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: 071208
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/Learning
       SPRING_REDIS_HOST: redis
       SPRING_REDIS_PORT: 6379
     env_file:
       - .env.local
     networks:
       - learning-network
-
-volumes:
-  postgres_data:
 
 networks:
   learning-network:

@@ -6,4 +6,8 @@
     <springProfile name="dev">
         <include resource="logback-spring-dev.xml" />
     </springProfile>
+
+    <springProfile name="docker">
+        <include resource="logback-spring-dev.xml" />
+    </springProfile>
 </configuration>
