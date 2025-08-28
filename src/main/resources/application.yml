@@ -77,3 +77,16 @@ management:
 cloudflare:
   r2:
     bucketName: cdn-assets
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  datasource:
+    url: jdbc:postgresql://postgres:5432/Learning
+    username: postgres
+    password: 071208
+  redis:
+    host: redis
+    port: 6379
