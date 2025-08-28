@@ -10,7 +10,7 @@ services:
     networks:
       - learning-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d Learning"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d Learning || exit 1"]
       interval: 5s
       timeout: 5s
       retries: 5
