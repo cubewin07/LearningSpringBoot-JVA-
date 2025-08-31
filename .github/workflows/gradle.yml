@@ -26,7 +26,9 @@ jobs:
         distribution: 'temurin'
     - name: Allow Gradlew to be executed
       run: chmod +x gradlew
+    - name: Run test
+      run: ./gradlew test
     - name: Build with Gradle Wrapper
-      run: ./gradlew clean build -x test
+      run: ./gradlew clean build
     - name: Build Docker Image
       run: docker build -t learning-java-app .
