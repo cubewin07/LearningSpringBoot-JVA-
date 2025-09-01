@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a6e4059-4bf8-49fd-ac13-fae2de3cd1a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,34 +66,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.LearningJavaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle./Users/letanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Other computers/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/build.gradle.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build model_spring_full_setup.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build untitled.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserIntegrationTest.enrollCourse.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserIntegrationTest.getUser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.untitled [:org.example.LearningJavaApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthenServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthenServiceTest.testRegisterUserReturnsToken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.untitled [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.untitled [install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test/test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/letanthang/learning_software/backend-learning/LearningSpringBoot(JVA)/model_spring_full_setup&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/tanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Máy tính khác/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LearningJavaApplication.executor": "Run",
+    "Gradle./Users/letanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Other computers/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/build.gradle.executor": "Run",
+    "Gradle.Build model_spring_full_setup.executor": "Run",
+    "Gradle.Build untitled.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.UserIntegrationTest.enrollCourse.executor": "Run",
+    "Gradle.UserIntegrationTest.executor": "Run",
+    "Gradle.UserIntegrationTest.getUser.executor": "Run",
+    "Gradle.untitled [:org.example.LearningJavaApplication.main()].executor": "Run",
+    "JUnit.AuthenServiceTest.executor": "Run",
+    "JUnit.AuthenServiceTest.testRegisterUserReturnsToken.executor": "Run",
+    "JUnit.UserIntegrationTest.executor": "Run",
+    "Maven.untitled [clean].executor": "Run",
+    "Maven.untitled [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/letanthang/learning_software/backend-learning/LearningSpringBoot(JVA)/model_spring_full_setup",
+    "onboarding.tips.debug.path": "/Users/tanthang/Library/CloudStorage/GoogleDrive-tanthang071208@gmail.com/Máy tính khác/My Laptop/Learning sofware/backend-learning/LearningSpringBoot(JVA)/untitled/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.authen" />

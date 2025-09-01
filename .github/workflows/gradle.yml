@@ -29,6 +29,6 @@ jobs:
     - name: Run test
       run: ./gradlew test
     - name: Build with Gradle Wrapper
-      run: ./gradlew clean build
+      run: ./gradlew clean build -x test
     - name: Build Docker Image
       run: docker build -t learning-java-app .
