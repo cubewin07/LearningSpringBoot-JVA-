@@ -15,6 +15,7 @@ import org.springframework.http.ResponseCookie;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +24,7 @@ import java.time.Duration;
 
 @Component
 @RequiredArgsConstructor
-public class MyAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
+public class MyAuthSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
     private final JwtService jwtService;
     private final UserRepository userRepository;
 
@@ -58,6 +59,10 @@ public class MyAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
                 .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
+
+        setDefaultTargetUrl("/");
+        setAlwaysUseDefaultTargetUrl(false);
+
         super.onAuthenticationSuccess(request, response, authentication);
 
     }
