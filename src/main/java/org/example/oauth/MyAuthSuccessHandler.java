@@ -1,6 +1,7 @@
 package org.example.oauth;
 
 import com.google.auth.oauth2.OAuth2CredentialsWithRefresh;
+import com.nimbusds.oauth2.sdk.http.HTTPResponse;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,6 +10,7 @@ import org.example.config.JwtService;
 import org.example.user_service.model.Role;
 import org.example.user_service.model.User;
 import org.example.user_service.repository.UserRepository;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -55,6 +57,7 @@ public class MyAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
                 .maxAge(Duration.ofHours(1))
                 .build();
 
+        response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
         super.onAuthenticationSuccess(request, response, authentication);
 
     }
