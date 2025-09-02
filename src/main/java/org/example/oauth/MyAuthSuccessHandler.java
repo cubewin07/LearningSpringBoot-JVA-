@@ -9,16 +9,19 @@ import org.example.config.JwtService;
 import org.example.user_service.model.Role;
 import org.example.user_service.model.User;
 import org.example.user_service.repository.UserRepository;
+import org.springframework.http.ResponseCookie;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.Duration;
 
 @Component
 @RequiredArgsConstructor
-public class MyAuthSuccessHandler implements AuthenticationSuccessHandler {
+public class MyAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     private final JwtService jwtService;
     private final UserRepository userRepository;
 
@@ -44,11 +47,15 @@ public class MyAuthSuccessHandler implements AuthenticationSuccessHandler {
         }
 
         String jwt = jwtService.generateToken(email);
+        ResponseCookie cookie = ResponseCookie.from("jwt", jwt)
+                .httpOnly(true)
+                .secure(false)
+                .path("/")
+                .sameSite("None")
+                .maxAge(Duration.ofHours(1))
+                .build();
 
-        // Send JWT as a JSON response
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write("{\"token\": \"" + jwt + "\"}");
-        response.getWriter().flush();
+        super.onAuthenticationSuccess(request, response, authentication);
+
     }
 }
