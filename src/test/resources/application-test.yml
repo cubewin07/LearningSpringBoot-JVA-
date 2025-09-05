@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password:
@@ -14,10 +14,36 @@ spring:
   flyway:
     enabled: false
 
+# Disable cache in tests unless you want to test caching
+spring:
+  cache:
+    type: none
+
 logging:
   level:
-    org:
-      springframework:
-        boot:
-          context:
-            config: DEBUG
+    org.springframework.boot.context.config: DEBUG
+
+# Dummy values for external integrations (to avoid null pointer errors)
+cloudflare:
+  r2:
+    access:
+      key:
+        id: dummy-key-id
+    secret:
+      access:
+        key: dummy-secret
+    endpoint:
+      url: http://localhost/fake-endpoint
+
+cloudinary:
+  url: cloudinary://dummy:dummy@dummy
+
+oauth:
+  google:
+    client:
+      id: dummy-google-client-id
+      secret: dummy-google-client-secret
+  github:
+    client:
+      id: dummy-github-client-id
+      secret: dummy-github-client-secret
