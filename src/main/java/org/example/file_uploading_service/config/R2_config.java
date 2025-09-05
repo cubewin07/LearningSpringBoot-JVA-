@@ -15,11 +15,11 @@ public class R2_config {
     @Value("${cloudflare.r2.bucketName}")
     private String bucketName;
 
-    @Value("${cloudflare.r2.access.key.id}")
+    @Value("${cloudflare.r2.access-key-id}")
     private String accessKey;
-    @Value("${cloudflare.r2.secret.access.key}")
+    @Value("${cloudflare.r2.secret-access-key}")
     private String secretKey;
-    @Value("${cloudflare.r2.endpoint.url}")
+    @Value("${cloudflare.r2.endpoint-url}")
     private String endpoint;
 
     @Bean
