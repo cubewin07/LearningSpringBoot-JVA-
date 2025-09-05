@@ -111,7 +111,7 @@
       <option name="MAIN_CLASS_NAME" value="org.example.LearningJavaApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,7 +195,7 @@
       <module name="untitled.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
