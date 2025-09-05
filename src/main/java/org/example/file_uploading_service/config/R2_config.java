@@ -9,7 +9,6 @@ import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 
 import java.net.URI;
-import jakarta.annotation.PostConstruct;
 
 @Configuration
 public class R2_config {
@@ -23,14 +22,6 @@ public class R2_config {
     @Value("${cloudflare.r2.endpoint-url}")
     private String endpoint;
 
-    @PostConstruct
-    public void checkEnv() {
-        System.out.println("===== CHECK R2 CONFIG =====");
-        System.out.println("accessKey = " + accessKey);
-        System.out.println("secretKey = " + secretKey);
-        System.out.println("endpoint = " + endpoint);
-        System.out.println("==========================");
-    }
 
     @Bean
    public S3Client r2Client() {
