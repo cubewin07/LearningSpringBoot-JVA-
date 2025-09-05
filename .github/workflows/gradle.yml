@@ -44,6 +44,8 @@ jobs:
         distribution: 'temurin'
     - name: Allow Gradlew to be executed
       run: chmod +x gradlew
+    - name: Check env variables
+      run: ./gradlew test --tests org.example.EnvCheckTest
     - name: Build with Gradle Wrapper
       run: ./gradlew clean test --scan
 
