@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/Learning
-    username: postgres
-    password: 071208
+    username: ${spring.datasource.username:postgres}
+    password: ${spring.datasource.password:071208}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
@@ -43,16 +43,16 @@ spring:
       client:
         registration:
           google:
-            client-id: ${GOOGLE_CLIENT_ID}
-            client-secret: ${GOOGLE_CLIENT_SECRET}
+            client-id: ${oauth.google.client.id}
+            client-secret: ${oauth.google.client.secret}
             scope:
               - openid
               - profile
               - email
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
           github:
-            client-id: ${GITHUB_CLIENT_ID}
-            client-secret: ${GITHUB_CLIENT_SECRET}
+            client-id: ${oauth.github.client.id}
+            client-secret: ${oauth.github.client.secret}
             scope:
               - user
               - user:email
@@ -85,8 +85,8 @@ spring:
       on-profile: docker
   datasource:
     url: jdbc:postgresql://postgres:5432/Learning
-    username: "postgres"
-    password: "071208"
+    username: ${spring.datasource.username:postgres}
+    password: ${spring.datasource.password:071208}
   redis:
     host: redis
     port: 6379
