@@ -1,6 +1,5 @@
 package org.example;
 
-import io.github.cdimascio.dotenv.Dotenv;
 import org.example.user_service.service.AuthenService;
 import org.example.config.JwtService;
 import org.example.course.CourseRepository;
