@@ -16,6 +16,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: LearningSpringBoot-JVA- (marvelous-amazement / production)
     services:
       redis:
         image: redis:7-alpine

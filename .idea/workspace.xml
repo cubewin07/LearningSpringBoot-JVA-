@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a6e4059-4bf8-49fd-ac13-fae2de3cd1a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/EnvCheckTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="9a6e4059-4bf8-49fd-ac13-fae2de3cd1a3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
