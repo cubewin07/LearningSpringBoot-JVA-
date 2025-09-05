@@ -45,7 +45,7 @@ jobs:
     - name: Allow Gradlew to be executed
       run: chmod +x gradlew
     - name: Check env variables
-      run: ./gradlew test --tests org.example.EnvCheckTest
+      run: ./gradlew test --tests org.example.EnvCheckTest --info --console=plain
     - name: Build with Gradle Wrapper
       run: ./gradlew clean test --scan
 
