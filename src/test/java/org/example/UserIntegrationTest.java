@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.core.env.Environment;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.junit.jupiter.api.*;
@@ -37,7 +38,23 @@ public class UserIntegrationTest {
     private MockMvc mockMvc;
 
     private static String jwtToken;
-
+    @BeforeAll
+    static void beforeAll(@Autowired Environment env) {
+        System.out.println("== DEBUG ENVIRONMENT PROPERTIES ==");
+        for (String key : new String[] {
+                "cloudflare.r2.access-key-id",
+                "cloudflare.r2.secret-access-key",
+                "cloudflare.r2.endpoint-url",
+                "cloudinary.url",
+                "oauth.github.client-id",
+                "oauth.github.client-secret",
+                "spring.datasource.username",
+                "spring.datasource.password"
+        }) {
+            System.out.println(key + " = " + env.getProperty(key));
+        }
+        System.out.println("== END ==");
+    }
     @Test
     @Order(1)
     public void registerUserTesting() throws Exception {
