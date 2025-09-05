@@ -1,4 +1,4 @@
-package org.example;
+package org.example.config;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.env.Environment;
 import org.springframework.context.annotation.Bean;
