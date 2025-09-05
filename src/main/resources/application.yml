@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/Learning
-    username: ${spring.datasource.username:postgres}
-    password: ${spring.datasource.password:071208}
+    username: postgres
+    password: 071208
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
