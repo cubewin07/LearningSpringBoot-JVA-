@@ -13,9 +13,6 @@ spring:
       enabled: true
   flyway:
     enabled: false
-
-# Disable cache in tests unless you want to test caching
-spring:
   cache:
     type: none
 
@@ -23,7 +20,6 @@ logging:
   level:
     org.springframework.boot.context.config: DEBUG
 
-# Dummy values for external integrations (to avoid null pointer errors)
 cloudflare:
   r2:
     access:
