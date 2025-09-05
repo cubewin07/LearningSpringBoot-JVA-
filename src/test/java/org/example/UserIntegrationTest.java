@@ -39,24 +39,6 @@ public class UserIntegrationTest {
 
     private static String jwtToken;
 
-    @BeforeAll
-    public static void loadEnv() {
-        Dotenv dotenv = Dotenv.configure()
-                .filename(".env.local")
-                .ignoreIfMissing()
-                .load();
-
-        System.setProperty("cloudflare.r2.access.key.id", dotenv.get("CLOUDFLARE_R2_ACCESS_KEY_ID"));
-        System.setProperty("cloudflare.r2.secret.access.key", dotenv.get("CLOUDFLARE_R2_SECRET_ACCESS_KEY"));
-        System.setProperty("cloudflare.r2.endpoint.url", dotenv.get("CLOUDFLARE_R2_ENDPOINT_URL"));
-        System.setProperty("cloudinary.url", dotenv.get("CLOUDINARY_URL"));
-
-        System.setProperty("oauth.google.client.id", dotenv.get("OAUTH_GOOGLE_CLIENT_ID"));
-        System.setProperty("oauth.google.client.secret", dotenv.get("OAUTH_GOOGLE_CLIENT_SECRET"));
-        System.setProperty("oauth.github.client.id", dotenv.get("OAUTH_GITHUB_CLIENT_ID"));
-        System.setProperty("oauth.github.client.secret", dotenv.get("OAUTH_GITHUB_CLIENT_SECRET"));
-    }
-
     @Test
     @Order(1)
     public void registerUserTesting() throws Exception {
