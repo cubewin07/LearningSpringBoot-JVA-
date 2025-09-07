@@ -26,10 +26,13 @@ public class UserIntegrationTest {
 
     @Autowired
     private UserRepository userRepository;
+    
     @Autowired
     private AuthenService authenService;
+
     @Autowired
     private JwtService jwtService;
+
     @Autowired
     private CourseRepository courseRepository;
 
@@ -37,6 +40,7 @@ public class UserIntegrationTest {
     private MockMvc mockMvc;
 
     private static String jwtToken;
+
     @Test
     @Order(1)
     public void registerUserTesting() throws Exception {
