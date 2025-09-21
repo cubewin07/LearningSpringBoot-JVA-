@@ -1,0 +1,13 @@
+<configuration>
+    <springProfile name="prod">
+        <include resource="logback-spring-prod.xml" />
+    </springProfile>
+
+    <springProfile name="dev">
+        <include resource="logback-spring-dev.xml" />
+    </springProfile>
+
+    <springProfile name="docker">
+        <include resource="logback-spring-dev.xml" />
+    </springProfile>
+</configuration>
